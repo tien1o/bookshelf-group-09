@@ -1,1 +1,26 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+  Single-colored icons can be modified like so:
+  .icon-name {
+    font-size: 32px;
+    color: red;
+  }
+  ========================================== */
+
+.icon-Sing-inBtn {
+  width: 0.884765625em;
+}
+
+.icon-Gerb {
+  width: 0.625em;
+}
