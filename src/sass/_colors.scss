@@ -1,0 +1,24 @@
+:root {
+  // Text colors
+  --primary-white: #ffffff;
+  --primary-black: #111111;
+  --secondary-black: #202024;
+  --category-and-autor-color: #b4afaf;
+
+  // Accents and buttons colors
+  --accent-color-blue: #4f2ee8;
+  --accent-color-yellow: #eac645;
+
+  // backdrop-color
+  --backdrop-color: rgba(17, 17, 17, 0.4);
+
+  //LightTheme colors
+  --light-body-background: #f6f6f6;
+
+  // DarkTheme colors
+  --dark-body-background: #202024;
+
+  // Animations
+  --transition-time: 250ms;
+  --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}

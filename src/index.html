@@ -3,12 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <title>Bookshelf</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    ❗️❗️❗️ Add partials like so for every page
-    <!-- <include src="./partials/example.html"></include> -->
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        blanditiis nihil deleniti ipsam consectetur. Autem laudantium sit
+        obcaecati voluptatum veniam voluptatem, tempore rem, nemo, minus natus
+        perspiciatis soluta et molestiae.
+      </p>
+      <div class="main">
+        <!-- Header -->
+        <include src="partials/header-section.html"></include>
+        <!-- Bookshelf section -->
+        <include src="partials/bookshelf-section.html"></include>
+      </div>
+    </main>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
