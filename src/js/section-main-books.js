@@ -9,13 +9,14 @@ export function renderAllCategories() {
 
         const containerBooksList = document.createElement('ul');
         containerBooksList.classList.add('bookshelf__list');
+        containerBooksList.classList.add('list');
        booksApi()
        .then(data => {
          const markap = data.map(({list_name, books}) =>{
           // console.log(list_name, books)
-return `<li>
+return `<li class='book__card__item'>
 <h2 class='bookshelf__title__category'>${list_name}</h2>
-<ul class='bookshelf__content book-card__list'>${books.map(({
+<ul class='bookshelf__content book-card__list list'>${books.map(({
    _id,
    book_image_height,
    book_image_width,
@@ -35,10 +36,10 @@ return `<li>
    </div>
  </a>
  <div class='book-card__wrap'>
-   <h3 class='book-card__name'>${
+   <h3 class='book__card__name'>${
      title ? title : 'Unknown title'
    }</h3>
-   <p class='book-card__author'>${
+   <p class='book__card__author'>${
      author ? author : 'Unknown author'
    }</p>
  </div>
@@ -47,7 +48,7 @@ return `<li>
 )
 .join('')}
 </ul>
-<button class='bookshelf__btn' type='button' data-see-more data-category-name='${list_name}'>see more</button>
+<button class='book__see__more__btn' type='button' data-see-more data-category-name='${list_name}'>see more</button>
 </li>`}).join('')
 containerBooksList.innerHTML = markap;
 mainSectionsBooks.innerHTML = titleAllCategoriesMain;
