@@ -3,34 +3,34 @@ import {booksApi} from './apiBooks'
 
 
 const mainSectionsBooks = document.querySelector('.bookcase');
-let renderWidth = 375;
+// let renderWidth = 375;
 
-window.addEventListener('resize', resizeWindow);
+// window.addEventListener('resize', resizeWindow);
 
-function resizeWindow() {
+// function resizeWindow() {
  
  
-  if (
-    window.innerWidth > 767 && renderWidth < 768 ||
-    window.innerWidth > 1439 && renderWidth < 1440 ||
-    window.innerWidth < 1440 && renderWidth > 1439 ||
-    window.innerWidth < 768 && renderWidth > 767
-  ) {
-    location.reload();
-  }
-}
+//   if (
+//     window.innerWidth > 767 && renderWidth < 768 ||
+//     window.innerWidth > 1439 && renderWidth < 1440 ||
+//     window.innerWidth < 1440 && renderWidth > 1439 ||
+//     window.innerWidth < 768 && renderWidth > 767
+//   ) {
+//     location.reload();
+//   }
+// }
 
-renderWidth = window.innerWidth;
-let renderedBooks = 1;
-if (renderWidth < 768) {
-  renderedBooks = 1;
-} else if (renderWidth > 767 && renderWidth < 1440) {
-  renderedBooks = 3;
-} else {
-  renderedBooks = 5;
-}
+// renderWidth = window.innerWidth;
+// let renderedBooks = 1;
+// if (renderWidth < 768) {
+//   renderedBooks = 1;
+// } else if (renderWidth > 767 && renderWidth < 1440) {
+//   renderedBooks = 3;
+// } else {
+//   renderedBooks = 5;
+// }
 
-export function renderAllCategories() {
+export async function renderAllCategories() {
   
    const titleAllCategoriesMain = `<h1 class='bookcase__title'>
           Best Sellers <span class='bookcase__filter'>Books</span>
@@ -39,7 +39,7 @@ export function renderAllCategories() {
         const containerBooksList = document.createElement('ul');
         containerBooksList.classList.add('bookshelf__list');
         containerBooksList.classList.add('list');
-       booksApi()
+    await booksApi()
        .then(data => {
          const markap = data.map(({list_name, books}) =>{
           // console.log(list_name, books)
@@ -57,6 +57,7 @@ return `<li class='book__card__item'>
  <a class='book-card__link' href='#' data-id='${_id}'>
    <div class='book-card__wrapper'>
      <img class='book-card__image' src='${book_image}' alt="Here must be book's name"
+     loading="lazy"
      width='${book_image_width}'
      height='${book_image_height}'>
      <div class='book-card__overlay'>
@@ -74,7 +75,7 @@ return `<li class='book__card__item'>
  </div>
 </li>`;
  }
-).slice(0, renderedBooks)
+)
 .join('')}
 </ul>
 <button class='book__see__more__btn' type='button' data-see-more data-category-name='${list_name}'>see more</button>
