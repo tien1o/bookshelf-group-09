@@ -39,8 +39,7 @@ color: var(--primary-black);
     grid-template-columns: repeat(5,1fr);
     column-gap: 25px;
     margin-bottom: 32px;
-}
-};
+}};
 
 .bookshelf__title__category{
     letter-spacing: .03em;
@@ -63,9 +62,28 @@ color: var(--primary-black);
 };
 }
 
-.book__card__item:not(:last-child) {
+
+.book__card__item{
+  &:not(:last-child) {
     margin-bottom: 40px;
+  }
 }
+
+.book-card__item{
+
+&:nth-last-child(-n + 4) {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+}}
+
+
+&:nth-last-child(-n + 2) {
+  @media screen and (max-width: 1439.98px) {
+        display: none;
+    };
+}}
+
+
 
 
 .book-card__wrapper {
