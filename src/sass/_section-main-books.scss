@@ -69,19 +69,19 @@ color: var(--primary-black);
   }
 }
 
-.book-card__item{
+// .book-card__item{
 
-&:nth-last-child(-n + 4) {
-  @media screen and (max-width: 767.98px) {
-    display: none;
-}}
+// &:nth-last-child(-n + 4) {
+//   @media screen and (max-width: 767.98px) {
+//     display: none;
+// }}
 
 
-&:nth-last-child(-n + 2) {
-  @media screen and (max-width: 1439.98px) {
-        display: none;
-    };
-}}
+// &:nth-last-child(-n + 2) {
+//   @media screen and (max-width: 1439.98px) {
+//         display: none;
+//     };
+// }}
 
 
 
