@@ -1,0 +1,167 @@
+.bookcase__title{
+font-weight: 700;
+font-size: 32px;
+line-height: 1.1875;
+letter-spacing: -0.04em;
+
+color: var(--primary-black);
+
+@media screen and (min-width: 768px)
+{
+    font-size: 48px;
+    line-height: 1.08333;
+}
+
+}
+.book-card__link {
+    display: inline-block;
+  }
+
+.bookcase__filter{
+    color: var(--accent-color-blue);
+};
+
+.book-card__list {
+    grid-template-rows: fit-content(1%);
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    row-gap: 40px;
+    margin-bottom: 8px;
+    display: grid;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 25px;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 25px;
+    margin-bottom: 32px;
+}};
+
+.bookshelf__title__category{
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    color: var(--category-and-autor-color);
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28571;
+}
+
+.book-card__image {
+    width: 335px;
+
+ @media screen and (min-width: 768px) {
+    height: 316px;
+};
+@media screen and (min-width: 1440px) {
+    height: 256px;
+};
+}
+
+
+.book__card__item{
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+// .book-card__item{
+
+// &:nth-last-child(-n + 4) {
+//   @media screen and (max-width: 767.98px) {
+//     display: none;
+// }}
+
+
+// &:nth-last-child(-n + 2) {
+//   @media screen and (max-width: 1439.98px) {
+//         display: none;
+//     };
+// }}
+
+
+
+
+.book-card__wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: 1px solid var(--category-and-autor-color);
+  }
+  
+  .book-card__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+  
+    color: var(--primary-white);
+    background: var(--accent-color-yellow);
+    border-radius: 0px 0px 8px 8px;
+    
+transform: translate(0, 100%);
+transition: transform 250ms var(--transition-cubic);
+  }
+  
+  .book-card__link:hover .book-card__overlay,
+  .book-card__link:focus .book-card__overlay {
+    transform: translateY(0);
+  }
+
+  .book-card__wrap{
+    padding-top: 14px;
+  }
+
+  .book__card__name{
+    font-weight: 700;
+font-size: 16px;
+line-height: 1.125;
+letter-spacing: -0.04em;
+text-transform: uppercase;
+
+    color: var(--primary-black);
+    margin-bottom: 4px;
+    
+  }
+
+  .book__card__author{
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16667;
+letter-spacing: -0.04em;
+
+color: var(--category-and-autor-color);
+
+  }
+
+  .book__see__more__btn{
+    display: block;
+    margin-left: auto;
+   
+align-items: flex-start;
+padding: 14px 28px;
+
+
+width: 124px;
+height: 46px;
+
+border: 2px solid var(--accent-color-blue);
+border-radius: 40px;
+
+transition: color, background-color 250ms var(--transition-cubic);
+
+    &:hover {
+        background-color: var(--accent-color-blue);
+        color: var(--primary-white);
+    }
+  }
