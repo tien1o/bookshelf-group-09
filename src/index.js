@@ -13,3 +13,6 @@ import supportUkraine from './js/support-ukraine';
 //Modal window
 
 //Shopping List
+
+//Category list
+import CategoryList from './js/list-of-categories';
