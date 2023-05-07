@@ -1,52 +1,88 @@
-<header>
-    <a href="./index.html" class="logo">
-        <svg class="logo-icon" width="22" height="22">
-            <use href="./images/svg-sprite.svg#booklogo-icon"></use>
-        </svg>
-        <svg class="logo-text" width="53" height="17">
-            <use href="./images/svg-sprite.svg#booklogo-book"></use>
-        </svg>
-    </a>
-    <nav class="nav">
-        <ul class="nav__list list">
-            <li class="nav-item nav-active">
-                <a href="./index.html" class="nav__link active link"> Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="./shopping-list.html" class="nav__link link">
-                    Shopping list
-                    <svg class="header__link-icon" width="20" height="20">
-                        <use href="./images/svg-sprite.svg#bag"></use>
+<header class="header">
+    <div class="container header__container">
+        <!-- Logo-->
+        <a href="./" class="logo" aria-label="to home page">
+            <!-- Logo-light-->
+            <svg class="js-logo-light-svg" width="83" height="28">
+                <use href="./images/icons.svg#logo-light"></use>
+            </svg>
+
+            <!-- Logo-dark-->
+            <svg class="js-logo-dark-svg visually-hidden" width="83" height="28">
+                <use href="./images/icons.svg#logo-dark"></use>
+            </svg>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="navigation visually-hidden">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link js-main-page-link" href="./" aria-label="to home page">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link navigation__link--with-icon js-list-page-link"
+                        href="./shopping-list.html" aria-label="to shopping list">
+                        <span>Shopping list</span>
+                        <svg class="mobile-menu-btn__icon" width="20" height="20">
+                            <use href="./images/icons.svg#cart"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Color scheme toggle -->
+        <fieldset class="switcher" aria-label="color theme switcher">
+            <legend class="switcher__legend visually-hidden">Схема</legend>
+            <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light"
+                aria-label="Light color scheme" checked />
+            <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark"
+                aria-label="Dark color scheme" />
+            <div class="switcher__bg"></div>
+            <div class="switcher__status"></div>
+        </fieldset>
+        <!-- Sign up btn -->
+        <button class="sign-up-btn" type="button" data-modal-open aria-label="sign in">
+            <span class="sign-up-btn__text">Sign up</span>
+            <svg class="sign-up-btn__icon" width="20" height="20">
+                <use href="./images/icons.svg#golder-arrow-right"></use>
+            </svg>
+        </button>
+        <!-- User bar-->
+        <ul class="user-bar js-user-bar visually-hidden">
+            <li class="user-bar__item">
+                <!-- User-bar-btn -->
+                <button class="user-bar-btn js-user-bar-btn" type="button" aria-label="user bar button">
+                    <svg class="user-bar-btn__avatar-icon" width="37" height="37">
+                        <use href="./images/icons.svg#user-ico"></use>
                     </svg>
-                </a>
+                    <span class="user-bar-btn__text"></span>
+                    <svg class="user-bar-btn__arrow-icon" width="23" height="26">
+                        <use href="./images/icons.svg#user-caret-down"></use>
+                    </svg>
+                </button>
+                <ul class="dropdown">
+                    <li class="dropdown-list__item">
+                        <!-- Log-out-btn -->
+                        <button class="log-out-btn js-log-out-btn" type="button" aria-label="Log out">
+                            <span class="log-out-btn__text">Log out</span>
+                            <svg class="log-out-btn__icon" width="20" height="20">
+                                <use href="./images/icons.svg#golder-arrow-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
             </li>
         </ul>
-    </nav>
 
-    <input type="checkbox" name="theme switcher" id="theme-switch" class="theme-switch" />
-
-    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="header__mobile-menu" width="28" height="28">
-            <use class="menu-icon" id="menu-icon" href="./images/svg-sprite.svg#ham-menu-icon"></use>
-        </svg>
-    </button>
-    <button type="button" class="btn-default header__singup-btn">
-        Sign up<svg class="header__singup-icon" width="20" height="20">
-            <use href="./images/svg-sprite.svg#arrow-right-icon"></use>
-        </svg>
-    </button>
-    <button type="button" class="btn-default header__singin-btn">
-        <svg class="header__singin-icon" width="19" height="19">
-            <use href="./images/svg-sprite.svg#user-default-icon"></use>
-        </svg>
-        Stephen
-        <svg class="header__singin-down-icon" width="23" height="26">
-            <use href="./images/svg-sprite.svg#user-arrow-down-icon"></use>
-        </svg>
-    </button>
-    <button type="button" class="btn-default header__logout-btn">
-        Log out<svg class="header__singup-icon" width="20" height="20">
-            <use href="./images/svg-sprite.svg#arrow-right-icon"></use>
-        </svg>
-    </button>
+        <!-- Burger menu btn -->
+        <button class="mobile-menu-btn js-mobile-menu-btn" type="button">
+            <svg class="mobile-menu-btn__icon" width="28" height="28" aria-label="Mobile menu switcher"
+                aria-controls="mobile-menu">
+                <use class="js-mobile-menu-open" href="./images/icons.svg#burger"></use>
+                <use class="js-mobile-menu-close" href="./images/icons.svg#close-btn"></use>
+            </svg>
+        </button>
+    </div>
 </header>
