@@ -11,3 +11,5 @@ import supportUkraine from './js/support-ukraine';
 //List of Categories
 
 //Modal window
+
+//Shopping List
