@@ -1,4 +1,13 @@
+//Header Js
+
+//apiBooks
 import apiBooks from './js/apiBooks';
+//Main Books
 import sectionMainBooks from './js/section-main-books';
+//Support Ukraine
 import supportUkraine from './js/support-ukraine';
-// import { iconRender } from './js/iconRender';
+//Category Page
+
+//List of Categories
+
+//Modal window
