@@ -4,14 +4,12 @@
         <div class="logotype">
             <a href="#" class="logotype__logo">
                 <svg class="logotype__logo-img" width="24" height="24">
-                    <use href="../images/logo.png"></use>
+                    <use href="../images/icons.svg#icon-logo"></use>
                 </svg>
             </a>
             
             <a href="#" class="logotype__name">
-                    <svg class="logotype__name__img" width="77" height="13.27">
-                        <use href="../images/Bookshelf.png"></use>
-                    </svg>
+                    <img src="../images/header/Bookshelf.png" alt="page name" class="logotype__name__img" width="77" height="13">
             </a>
         </div>
 
@@ -27,7 +25,7 @@
                     <a href="#" class="navigation__link">
                         <span>Shopping list</span>
                         <svg width="20" height="20">
-                            <use href="./images/icons.svg#icon-bag"></use>
+                            <use href="../images/icons.svg#icon-bag"></use>
                         </svg>
                     </a>
                 </li>
@@ -38,17 +36,17 @@
         <div class="username">
             <fieldset class="username__checkbox">
                 <legend class="visually-hidden">Зміна кольору</legend>
-                <input type="radio" name="color-scheme" value="light" checked />
-                <input type="radio" name="color-scheme" value="dark" />
+                <input type="radio" name="color-scheme" value="light">
+                <input type="radio" name="color-scheme" value="dark">
             </fieldset>
 
             <button type="button" class="username__button">
                 <svg width="37" height="37" class="username__svg">
-                    <use href="./images/icons.svg#icon-user"></use>
+                    <use href="../images/icons.svg#icon-user"></use>
                 </svg>
                     <span>Stephen</span>
                 <svg width="20" height="20" class="username__svg-arrow">
-                    <use href="./images/icons.svg#icon-arrow-right"></use>
+                    <use href="../images/icons.svg#icon-arrow-right"></use>
                 </svg>
             </button>
 
@@ -58,10 +56,49 @@
         <div class="mobile-menu">
             <button type="button" class="mobile-menu__button">
                 <svg width="28" height="28" class="mobile-menu__icon">
-                    <use href="./images/icons.svg#"></use>
+                    <use href="../images/icons.svg#icon-align-left"></use>
                 </svg>
             </button>
 
         </div>     
+    </div>
+
+    <!-- Modal window -->
+    <div class="modal window">
+        <ul class="modal window__list">
+            <li class="modal window__items"> 
+                <svg width="37" height="37" class="username__svg">
+                    <use href="../images/icons.svg#icon-user"></use>
+                </svg>
+                <span>Stephen</span>
+            </li>
+            <li class="modal window__items">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <span>Shopping list</span>
+                                <svg width="20" height="20">
+                                    <use href="../images/icons.svg#icon-bag"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </li>
+            <li class="modal window__items">
+                <button type="button" class="mobile-menu__button">
+                    <svg width="28" height="28" class="mobile-menu__icon">
+                        <use href="../images/icons.svg#icon-align-left"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+
     </div>
 </header>
