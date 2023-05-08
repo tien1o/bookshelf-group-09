@@ -6,3 +6,129 @@
     border-radius: 0px 0px 8px 8px;
     background-color: var(--light-body-background);
 }
+
+// Logotype / логотип
+
+.logo {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        margin-right: 32px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        margin-right: 24px;
+    }
+}
+
+// Navigation / меню
+
+.navigation__list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        gap: 24px;
+    }
+}
+
+.navigation__item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 10px;
+    
+    width: 72px;
+    height: 34px;
+    
+
+}
+.current{
+    background: #EAC645;
+    border-radius: 36px;
+
+}
+
+// Color scheme toggle / перемикач
+.switcher {
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 14px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 24px;
+    }
+}
+
+.switcher__radio {
+    outline: 0;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+
+    cursor: pointer;
+}
+
+.switcher__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.switcher__status {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1),
+        1px 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    @include transition(transform);
+}
+
+.switcher__radio--dark {
+    &:checked~.switcher__status {
+        transform: translateX(20px);
+    }
+
+    &:checked~.switcher__bg {
+        background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+    }
+}
+
+.switcher__radio:focus-visible~.switcher__status {
+    box-shadow: 0 0 0 2px hsla(0, 0%, 0%, 1);
+}
+
+// Sign up / реєстрація
+// User bar
+// Burger menu
