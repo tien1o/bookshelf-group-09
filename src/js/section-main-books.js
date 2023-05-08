@@ -1,5 +1,5 @@
 import {booksApi} from './apiBooks'
-
+import { openModal } from './modal';
 
 
 const mainSectionsBooks = document.querySelector('.bookcase');
@@ -53,7 +53,7 @@ return `<li class='book__card__item'>
    book_image,
    title,
  }) => {
-   return `<li class='book-card__item'>
+   return `<li class='book-card__item'data-id=${_id}>
  <a class='book-card__link' href='#' data-id='${_id}'>
    <div class='book-card__wrapper'>
      <img class='book-card__image' src='${book_image}' alt="Here must be book's name"
@@ -66,12 +66,8 @@ return `<li class='book__card__item'>
    </div>
  </a>
  <div class='book-card__wrap'>
-   <h3 class='book__card__name'>${
-     title ? title : 'Unknown title'
-   }</h3>
-   <p class='book__card__author'>${
-     author ? author : 'Unknown author'
-   }</p>
+   <h3 class='book__card__name'>${title ? title : 'Unknown title'}</h3>
+   <p class='book__card__author'>${author ? author : 'Unknown author'}</p>
  </div>
 </li>`;
  }
@@ -84,6 +80,9 @@ return `<li class='book__card__item'>
 containerBooksList.innerHTML = markap;
 mainSectionsBooks.innerHTML = titleAllCategoriesMain;
 mainSectionsBooks.appendChild(containerBooksList)
+         
+ const bookElements = document.querySelectorAll('.book-card__item');
+ bookElements.forEach(el => el.addEventListener('click', () => openModal(el)));
 
 })
    }

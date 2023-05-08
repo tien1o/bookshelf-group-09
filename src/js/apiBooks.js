@@ -8,19 +8,19 @@ return responsive.data
 
 export async function booksId(id) {
     const responsive = await axios.get(`https://books-backend.p.goit.global/books/${id}`)
-    return responsive.date
+    return responsive.data
   }
 
 
   export async function booksCategory(category) {
     const responsive = await axios.get(`https://books-backend.p.goit.global/books/category?category=${category}`)
-    return responsive.date
+    return responsive.data
   }
 
 
   export async function booksList() {
     const responsive = await axios.get(`https://books-backend.p.goit.global/books/category-list`)
-    return responsive.date
+    return responsive.data
   }
 
 

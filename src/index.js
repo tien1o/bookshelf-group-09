@@ -11,7 +11,7 @@ import supportUkraine from './js/support-ukraine';
 //List of Categories
 
 //Modal window
-
+import { openModal } from './js/modal';
 //Shopping List
 
 //Category list
