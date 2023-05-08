@@ -18,6 +18,7 @@ ul {
 .container-support {
   display: block;
   position: absolute;
+  padding-left: 40px;
   left: 20px;
   top: 372px;
   width: 335px;
@@ -53,14 +54,14 @@ ul {
 .container-ukraine {
   display: flex;
   position: relative;
-  justify-content: center;
+//   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
 }
 
 .container-list {
   display: block;
-  padding-left: 20px;
+  
   padding-bottom: 16px;
   height: 200px;
   overflow: hidden;
@@ -101,13 +102,14 @@ element.style {
 
 .title {
   font-family: 'DM Sans';
+  
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
   margin-right: 15px;
   width: 18px;
   height: 18px;
-  top: 7px;
+  margin-top: 12px;
   letter-spacing: -0.04em;
 }
 
@@ -122,19 +124,19 @@ element.style {
   background-color: #ffffff;
   /* transform: rotate(85deg); */
   left: 45%;
-  top: 320px;
+  top: 310px;
   border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .swiper-button-next {
-    top: 440px;
+    top: 420px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .swiper-button-next {
-    top: 460px;
+    top: 440px;
   }
 }
 
