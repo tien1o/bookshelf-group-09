@@ -17,10 +17,7 @@ ul {
 }
 .container-support {
   display: block;
-  position: absolute;
   padding-left: 40px;
-  left: 20px;
-  top: 372px;
   width: 335px;
   height: 352px;
   background: radial-gradient(
@@ -54,14 +51,14 @@ ul {
 .container-ukraine {
   display: flex;
   position: relative;
-//   justify-content: center;
+  //   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
 }
 
 .container-list {
   display: block;
-  
+
   padding-bottom: 16px;
   height: 200px;
   overflow: hidden;
@@ -102,7 +99,7 @@ element.style {
 
 .title {
   font-family: 'DM Sans';
-  
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
@@ -121,8 +118,6 @@ element.style {
 .icon-list:last-child {
   width: 130px;
 }
-
-
 
 .swiper-button-next {
   position: absolute;
