@@ -16,3 +16,7 @@ import { openModal } from './js/modal';
 
 //Category list
 import CategoryList from './js/list-of-categories';
+// Scroll up
+import ScrollUp from './js/scrollup';
+// Switcher theme
+import SwitcherTheme from './js/switcher-theme';
