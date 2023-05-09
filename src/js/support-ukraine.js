@@ -12,12 +12,12 @@ listIcon.insertAdjacentHTML('beforeend', itemsMarkup);
 
 function rendarListIcon(iconRender) {
   return iconRender
-    .map(({ title, url, img }) => {
+    .map(({ title, url, img, img2 }) => {
       return `
         <li class='icon-list swiper-slide'> 
         <p class="title">${title}</p>
         <a class="sl" href="${url}" target="_blank">
-        <img class="fl image-slider" src="${img}">
+        <img class="fl image-slider" src="${img, img2}">
         </a>
         </li>
         `;
@@ -37,14 +37,19 @@ new Swiper(swiperContainer, {
     sensitivity: 1,
   },
 
+  rewind: true,
+  slidesPerView: 3,
+
   breakpoints: {
     320: {
       slidesPerView: 4, //показывать по 4 превью
-      loop: true,
     },
     768: {
       slidesPerView: 6, //показывать по 6 превью
-      loop: true,
     },
+  },
+
+  scrollbar: {
+    el: swiperScroll,
   },
 });
