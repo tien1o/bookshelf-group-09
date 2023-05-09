@@ -12,7 +12,7 @@ export const iconRender = [
   {
     title: '01',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: imageOne,
+    img: imageOne
   },
   {
     title: '02',
