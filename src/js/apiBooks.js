@@ -13,10 +13,13 @@ export async function booksId(id) {
 
 
   export async function booksCategory(category) {
-    const responsive = await axios.get(`https://books-backend.p.goit.global/books/category?category=${category}`)
+    const responsive = await axios.get(`https://books-backend.p.goit.global/books/category`, {
+      params: {
+        category,
+      },
+  })
     return responsive.data
   }
-
 
   export async function booksList() {
     const responsive = await axios.get(`https://books-backend.p.goit.global/books/category-list`)
