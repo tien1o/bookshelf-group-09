@@ -9,7 +9,6 @@ window.addEventListener('load', rememberSelectedTheme);
 const localStorageKey = 'save-theme';
 let savedTheme = '';
 
-
 function toggleThemeOnDark() {
   htmlChangeClass.classList.add('dark');
   darkTheme.checked = true;

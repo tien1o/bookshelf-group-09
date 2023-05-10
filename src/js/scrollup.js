@@ -1,14 +1,14 @@
-const loadMoreBtn = document.querySelector(".scrollup")
+const loadMoreBtn = document.querySelector('.scrollup');
 
-$(window).scroll(function(){
-   if ($(this).scrollTop() > 100) {
-       $('.scrollup').fadeIn();
-   } else {
-       $('.scrollup').fadeOut();
-   }
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $('.scrollup').fadeIn();
+  } else {
+    $('.scrollup').fadeOut();
+  }
 });
 
-$('.scrollup').click(function(){
-   $("html, body").animate({ scrollTop: 0 }, 600);
-   return false;
+$('.scrollup').click(function () {
+  $('html, body').animate({ scrollTop: 0 }, 600);
+  return false;
 });

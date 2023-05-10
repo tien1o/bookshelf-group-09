@@ -1,5 +1,5 @@
-import { getCategories,getBooksByCategory } from '../js/getcategories';
-import {booksCategory} from './apiBooks'
+import { getCategories, getBooksByCategory } from '../js/getcategories';
+import { booksCategory } from './apiBooks';
 import { renderAllCategories } from './section-main-books';
 
 const listOfCategories = document.querySelector('.categories__list');
@@ -18,11 +18,44 @@ getCategories().then(response => {
 
 function onCategoryClick(evt) {
   evt.preventDefault();
+<<<<<<< Updated upstream
+
+  const activeCategorie = document.querySelector('.active__category');
+  activeCategorie.classList.remove('active__category');
+  evt.target.classList.add('active__category');
+
+  const categoryName = evt.target.innerHTML;
+
+  if (evt.target.innerHTML === 'All categories') {
+    renderAllCategories();
+  } else booksCategory(categoryName);
+
+  let mainTitle = document.createElement('h1');
+  const conteinerCategoryBooks = document.createElement('ul');
+  mainTitle.classList.add('bookcase__title');
+  mainTitle.innerHTML = normalizeMainTitle(categoryName);
+  conteinerCategoryBooks.classList.add('bookshelf__list', 'list');
+
+  booksCategory(categoryName).then(data => {
+    const mainSectionsBooks = document.querySelector('.bookcase');
+    const booksList = data
+      .map(
+        ({
+          book_image,
+          book_image_height,
+          book_image_width,
+          author,
+          title,
+          buy_links,
+          _id,
+        }) => {
+          return `<li class='book-card__item'>
+=======
   const categoryName = evt.target.dataset.categoryName;
   if (!categoryName) {
     return;
   }
-const activeCategorie = document.querySelector('.active__category');
+  const activeCategorie = document.querySelector('.active__category');
   activeCategorie.classList.remove('active__category');
   const currentCategory = document.querySelector(
     `[data-category-name="${categoryName}"]`
@@ -39,20 +72,22 @@ if (categoryName === 'All categories') {
   renderAllCategories();
   return;
 }
-booksCategory(categoryName)
-.then(data => {
-  console.log(data)
+booksCategory(categoryName).then(data => {
+  console.log(data);
   const mainSectionsBooks = document.querySelector('.bookcase');
-  const booksList = data.map(({
-    book_image,
-    book_image_height,
-    book_image_width,
-    author,
-    title,
-    buy_links,
-    _id,
-  }) => {
-    return `<li class='book-card__item'>
+  const booksList = data
+    .map(
+      ({
+        book_image,
+        book_image_height,
+        book_image_width,
+        author,
+        title,
+        buy_links,
+        _id,
+      }) => {
+        return `<li class='book-card__item'>
+>>>>>>> Stashed changes
 <a class='book-card__link' href='#' data-id='${_id}'>
 <div class='book-card__wrapper'>
 <img
@@ -72,24 +107,35 @@ height = '${book_image_height}'
 <p class='book-card__author'>${author ? author : 'Unknown author'}</p>
 </div>
 </li>`;
-  }
-)
-.join('');
-conteinerCategoryBooks.innerHTML = booksList;
-mainSectionsBooks.innerHTML = '';
-mainSectionsBooks.appendChild(mainTitle);
-mainSectionsBooks.appendChild(conteinerCategoryBooks);
-})
-
+<<<<<<< Updated upstream
+        }
+      )
+      .join('');
+    conteinerCategoryBooks.innerHTML = booksList;
+    mainSectionsBooks.innerHTML = '';
+    mainSectionsBooks.appendChild(mainTitle);
+    mainSectionsBooks.appendChild(conteinerCategoryBooks);
+  });
+}
+=======
+      }
+    )
+    .join('');
+  conteinerCategoryBooks.innerHTML = booksList;
+  mainSectionsBooks.innerHTML = '';
+  mainSectionsBooks.appendChild(mainTitle);
+  mainSectionsBooks.appendChild(conteinerCategoryBooks);
+});
+>>>>>>> Stashed changes
 
 function normalizeMainTitle(title) {
-let lastWordCategoryName = title.split(' ');
-if(lastWordCategoryName.length === 1) {
-  return lastWordCategoryName;
-}
-lastWordCategoryName = lastWordCategoryName[lastWordCategoryName.length - 1];
-let categoryName = title.split(' ');
-categoryName.pop();
-let innerCategoryName = categoryName.join(' ');
-return `${innerCategoryName} <span class="bookcase__filter">${lastWordCategoryName}</span>`;
+  let lastWordCategoryName = title.split(' ');
+  if (lastWordCategoryName.length === 1) {
+    return lastWordCategoryName;
+  }
+  lastWordCategoryName = lastWordCategoryName[lastWordCategoryName.length - 1];
+  let categoryName = title.split(' ');
+  categoryName.pop();
+  let innerCategoryName = categoryName.join(' ');
+  return `${innerCategoryName} <span class="bookcase__filter">${lastWordCategoryName}</span>`;
 }

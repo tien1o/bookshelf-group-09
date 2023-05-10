@@ -2,7 +2,7 @@
   width: 335px;
   height: 228px;
   overflow: auto;
-  margin-left: 20px;
+  margin-left: 0;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -27,7 +27,7 @@
 
   @media screen and (min-width: 1440px) {
     width: 356px;
-    margin-left: 24px;
+    margin-left: 0;
   }
 }
 
