@@ -1,5 +1,6 @@
 import {booksApi} from './apiBooks'
 import { openModal } from './modal';
+import {image} from '../images/without-Image/noImage-Medium.png'
 
 
 const mainSectionsBooks = document.querySelector('.bookcase');
@@ -53,6 +54,14 @@ return `<li class='book__card__item'>
    book_image,
    title,
  }) => {
+
+if (!book_image) {
+book_image = image
+book_image_height = 500;
+book_image_width = 330;
+ 
+} 
+
    return `<li class='book-card__item'data-id=${_id}>
  <a class='book-card__link' href='#' data-id='${_id}'>
    <div class='book-card__wrapper'>
@@ -82,17 +91,9 @@ mainSectionsBooks.innerHTML = titleAllCategoriesMain;
 mainSectionsBooks.appendChild(containerBooksList)
          
  const bookElements = document.querySelectorAll('.book-card__item');
- bookElements.forEach(el => el.addEventListener('click', () => openModal(el)));
+ bookElements.forEach(el => el.addEventListener('click', (event) => {
+  event.preventDefault()
+  openModal(el)}));
 
-})
-   }
-   renderAllCategories()
-
-
-
-   function handleScrollToElement(element, position = 'start') {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      position,
-    });
-  }
+})}
+renderAllCategories()

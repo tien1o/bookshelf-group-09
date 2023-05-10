@@ -5,7 +5,7 @@
 @import './svg';
 // Section Main Books styles
 @import './section-main-books';
-
+@import './bookshelf-section';
 // Section Header
 @import './header';
 // Section Category List styles
@@ -15,3 +15,6 @@
 // Shopping List Styles
 @import './shopping-list'
 // Theme change styles
+@import './dark-theme-colors';
+// Scroll up
+@import './scrollup.scss';

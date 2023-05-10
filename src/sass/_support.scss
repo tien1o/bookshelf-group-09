@@ -16,11 +16,9 @@ ul {
   text-decoration: none;
 }
 .container-support {
+  position: relative;
   display: block;
-  position: absolute;
   padding-left: 40px;
-  left: 20px;
-  top: 372px;
   width: 335px;
   height: 352px;
   background: radial-gradient(
@@ -37,8 +35,8 @@ ul {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .container-support {
     height: 472px;
-    left: 401px;
-    top: 112px;
+    // left: 401px;
+    // top: 112px;
   }
 }
 
@@ -46,22 +44,22 @@ ul {
   .container-support {
     width: 356px;
     height: 490px;
-    top: 670px;
-    left: 24px;
+    // top: 670px;
+    // left: 24px;
   }
 }
 
 .container-ukraine {
   display: flex;
-  position: relative;
-//   justify-content: center;
+  
+  //   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
 }
 
 .container-list {
   display: block;
-  
+
   padding-bottom: 16px;
   height: 200px;
   overflow: hidden;
@@ -102,7 +100,7 @@ element.style {
 
 .title {
   font-family: 'DM Sans';
-  
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
@@ -122,8 +120,6 @@ element.style {
   width: 130px;
 }
 
-
-
 .swiper-button-next {
   position: absolute;
   width: 32px;
@@ -131,7 +127,7 @@ element.style {
   background-color: #ffffff;
   /* transform: rotate(85deg); */
   left: 45%;
-  top: 310px;
+  top: 300px;
   border-radius: 50%;
 }
 

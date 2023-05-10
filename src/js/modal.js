@@ -38,7 +38,7 @@ export async function openModal(element) {
   const closeBtn = document.querySelector('.close-btn ');
   closeBtn.addEventListener('click', closeModal);
 
-  const orderBtn = document.querySelector('.order-btn');
+  const orderBtn = document.querySelector('[data-name="order-btn"]');
   orderBtn.addEventListener('click', onClick);
 
   const bookInformation = document.querySelector('.book-information');
@@ -58,7 +58,7 @@ export async function openModal(element) {
     if (value === null) {
       localStorage.setItem(LOCAL_KEY, JSON.stringify([bookId]));
       orderBtn.textContent = 'remove from the shopping list';
-      modal.style.height = '501px';
+      orderBtn.classList.add('order-btn-remove-state');
       textAfterRemoveBtn.innerHTML = `<p class='text-remove-btn'> Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>`;
     } else {
       const ids = JSON.parse(value);
@@ -68,13 +68,15 @@ export async function openModal(element) {
         const updatedIds = ids.filter(id => id !== bookId);
         localStorage.setItem(LOCAL_KEY, JSON.stringify(updatedIds));
         orderBtn.textContent = 'Add to shopping list';
-        //   modal.style.height = '465px';
+        orderBtn.classList.add('order-btn');
+        orderBtn.classList.remove('order-btn-remove-state');
         textAfterRemoveBtn.innerHTML = '';
       } else {
         ids.push(bookId);
         localStorage.setItem(LOCAL_KEY, JSON.stringify(ids));
         orderBtn.textContent = 'remove from the shopping list';
-        // modal.style.height = '501px';
+        orderBtn.classList.add('order-btn-remove-state');
+        orderBtn.classList.remove('order-btn');
         textAfterRemoveBtn.innerHTML = `<p class='text-remove-btn'> Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>`;
       }
     }
@@ -87,11 +89,13 @@ function bookInfoMarkup({ book_image, title, author, description, buy_links }) {
   const bookShopUrl = buy_links[0].url;
 
   return `
-      <img class='book-img' src="${book_image}" alt='./src/images/without-Image/noImage-Large.png'>
+      <img class='book-img' src="${
+        book_image ? book_image : './src/images/without-Image/noImage-Large.png'
+      }" alt='Book image'>
     <div class='book-descr-inf'>
-    <p class='book-title'>${title}</p>
-    <p class='book-author'>${author}</p>
-    <p class='book-description'>${description}</p>
+    <p class='book-title'>${title ? title : 'No title.'}</p>
+    <p class='book-author'>${author ? author : 'No author.'}</p>
+    <p class='book-description'>${description ? description : 'No description.'}</p>
     <ul class='links-group'>
     <li class='links'><a href=${amazonUrl} target="_blank"> <img  src='${amazon}' srcset="${amazon} 1x, ${amazon2x} 2x" alt ='Amazon Icon'></a></li>
     <li class='links'><a href=${appleUrl} target="_blank"> <img  src='${apple}' srcset="${apple} 1x, ${apple2x} 2x" alt ='Apple Icon'></a></li>
@@ -102,25 +106,28 @@ function bookInfoMarkup({ book_image, title, author, description, buy_links }) {
 }
 
 function setOrderBtnText(modal, bookId) {
-  const orderBtn = document.querySelector('.order-btn');
+  const orderBtn = document.querySelector('[data-name="order-btn"]');
   const textAfterRemoveBtn = document.querySelector('.text-input');
   const hasLocalStorageID = localStorage.getItem(LOCAL_KEY);
   console.log(hasLocalStorageID);
   console.log(bookId);
   if (hasLocalStorageID === null) {
     orderBtn.textContent = 'Add to shopping list';
+    orderBtn.classList.add('order-btn');
+    orderBtn.classList.remove('order-btn-remove-state');
     textAfterRemoveBtn.innerHTML = '';
   } else {
     const bookInStorage = JSON.parse(hasLocalStorageID);
     const textOnOrderBtn = bookInStorage.includes(bookId._id);
     if (textOnOrderBtn) {
-      console.log(bookId);
       orderBtn.textContent = 'remove from the shopping list';
-      // modal.style.height = '501px';
+      orderBtn.classList.add('order-btn-remove-state');
+      orderBtn.classList.remove('order-btn');
       textAfterRemoveBtn.innerHTML = `<p class='text-remove-btn'> Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>`;
     } else {
       orderBtn.textContent = 'Add to shopping list';
-      // modal.style.height = '465px';
+      orderBtn.classList.add('order-btn');
+      orderBtn.classList.remove('order-btn-remove-state');
       textAfterRemoveBtn.innerHTML = '';
     }
   }
