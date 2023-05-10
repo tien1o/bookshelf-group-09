@@ -1,0 +1,56 @@
+<div class="container-mb-menu js-menu-container" id="mobile-menu">
+    <div class="mobile-menu container">
+      <button
+        class="signup-btn"
+        type="button"
+        aria-label="Sign up"
+      >
+        <span class="signup-btn-text">Sign up</span>
+        <svg class="signup-btn__icon" width="20" height="20">
+          <use href="./images/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="user-container display-none">
+        <svg class="user-icon" width="37" height="37">
+          <use href="./images/icons.svg#user-icon"></use>
+        
+        </svg>
+       <p class="user-name">Stephen</p>
+      </div>
+      <nav class="mobile-list display-none">
+        <ul>
+          <li class="mobile-home-item">
+            <a
+              class="mobile-home"
+              href="./"
+              aria-label="to home page"
+              >Home</a
+            >
+          </li>
+          <!-- Вместо заглушки нужно добавить путь ./shopping-list.html -->
+          <li class="mobile-home-item">
+            <a
+              class="mobile-shoplist"
+              href="#"
+              aria-label="to shopping list"
+              >Shopping list
+              <svg class="shoplist-icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+       <button
+        class="mobile-logout js-mobile-logout display-none"
+        type="submit"
+        aria-label="Log out"
+      >
+        Log out
+        <svg class="logout-icon" width="20" height="20">
+          <use href="./images/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
