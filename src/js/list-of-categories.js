@@ -7,7 +7,7 @@ const listOfCategories = document.querySelector('.categories__list');
 getCategories().then(response => {
   const sortedCategories = response
     .map(categorie => {
-      return `<li class="categories__item data-category-name=${categorie.list_name}>${categorie.list_name}</li>`;
+      return `<li class="categories__item">${categorie.list_name}</li>`;
     })
     .sort()
     .join('');
