@@ -34,6 +34,8 @@ function onCategoryClick(evt) {
   );
   currentCategory.classList.add('active__category');
 
+  // ----------------------------------------Блок Маргарити---------------------------------------
+
   let mainTitle = document.createElement('h1');
   const categoryBooksList = document.createElement('ul');
   mainTitle.classList.add('bookcase__title');
@@ -99,5 +101,3 @@ function normalizeMainTitle(title) {
   let innerCategoryName = categoryName.join(' ');
   return `${innerCategoryName} <span class="bookcase__filter">${lastWordCategoryName}</span>`;
 }
-
-//
