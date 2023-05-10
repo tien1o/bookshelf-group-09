@@ -23,7 +23,6 @@ function onCategoryClick(evt) {
   activeCategorie.classList.remove('active__category');
   evt.target.classList.add('active__category');
 
-
   const categoryName = evt.target.innerHTML;
 
   if (evt.target.innerHTML === 'All categories') {
@@ -89,5 +88,4 @@ function normalizeMainTitle(title) {
   categoryName.pop();
   let innerCategoryName = categoryName.join(' ');
   return `${innerCategoryName} <span class="bookcase__filter">${lastWordCategoryName}</span>`;
-}
 }
