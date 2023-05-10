@@ -1,4 +1,4 @@
-import { getCategories, getBooksByCategory } from '../js/getcategories';
+import { getCategories } from '../js/getcategories';
 import { booksCategory } from './apiBooks';
 import { renderAllCategories } from './section-main-books';
 
@@ -7,31 +7,45 @@ const listOfCategories = document.querySelector('.categories__list');
 getCategories().then(response => {
   const sortedCategories = response
     .map(categorie => {
-      return `<li class="categories__item">${categorie.list_name}</li>`;
+      return `<li class="categories__item" data-category-name='${categorie.list_name}'>${categorie.list_name}</li>`;
     })
     .sort()
     .join('');
+
+  listOfCategories.innerHTML = `
+       <li class='categories__item active__category' data-category-name='All categories'>All categories</li>`;
   listOfCategories.insertAdjacentHTML('beforeend', sortedCategories);
   const allItems = document.querySelectorAll('.categories__item');
   allItems.forEach(() => addEventListener('click', onCategoryClick));
 });
 
 function onCategoryClick(evt) {
+  evt.preventDefault();
+  const categoryName = evt.target.dataset.categoryName;
+
+  if (!categoryName) {
+    return;
+  }
+
   const activeCategorie = document.querySelector('.active__category');
   activeCategorie.classList.remove('active__category');
-  evt.target.classList.add('active__category');
+  const currentCategory = document.querySelector(
+    `[data-category-name="${categoryName}"]`
+  );
+  currentCategory.classList.add('active__category');
 
-  const categoryName = evt.target.innerHTML;
-
-  if (evt.target.innerHTML === 'All categories') {
-    renderAllCategories();
-  } else booksCategory(categoryName);
+  // ----------------------------------------Блок Маргарити---------------------------------------
 
   let mainTitle = document.createElement('h1');
-  const conteinerCategoryBooks = document.createElement('ul');
+  const categoryBooksList = document.createElement('ul');
   mainTitle.classList.add('bookcase__title');
   mainTitle.innerHTML = normalizeMainTitle(categoryName);
-  conteinerCategoryBooks.classList.add('bookshelf__list', 'list');
+  categoryBooksList.classList.add('bookshelf__list', 'list');
+
+  if (categoryName === 'All categories') {
+    renderAllCategories();
+    return;
+  }
 
   booksCategory(categoryName).then(data => {
     const mainSectionsBooks = document.querySelector('.bookcase');
@@ -69,10 +83,10 @@ height = '${book_image_height}'
         }
       )
       .join('');
-    conteinerCategoryBooks.innerHTML = booksList;
+    categoryBooksList.innerHTML = booksList;
     mainSectionsBooks.innerHTML = '';
     mainSectionsBooks.appendChild(mainTitle);
-    mainSectionsBooks.appendChild(conteinerCategoryBooks);
+    mainSectionsBooks.appendChild(categoryBooksList);
   });
 }
 
