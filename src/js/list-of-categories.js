@@ -89,4 +89,3 @@ function normalizeMainTitle(title) {
   let innerCategoryName = categoryName.join(' ');
   return `${innerCategoryName} <span class="bookcase__filter">${lastWordCategoryName}</span>`;
 }
-//
