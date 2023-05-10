@@ -16,6 +16,7 @@ ul {
   text-decoration: none;
 }
 .container-support {
+  position: relative;
   display: block;
   padding-left: 40px;
   width: 335px;
@@ -34,8 +35,8 @@ ul {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .container-support {
     height: 472px;
-    left: 401px;
-    top: 112px;
+    // left: 401px;
+    // top: 112px;
   }
 }
 
@@ -43,14 +44,14 @@ ul {
   .container-support {
     width: 356px;
     height: 490px;
-    top: 670px;
-    left: 24px;
+    // top: 670px;
+    // left: 24px;
   }
 }
 
 .container-ukraine {
   display: flex;
-  position: relative;
+  
   //   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
@@ -126,7 +127,7 @@ element.style {
   background-color: #ffffff;
   /* transform: rotate(85deg); */
   left: 45%;
-  top: 310px;
+  top: 300px;
   border-radius: 50%;
 }
 
