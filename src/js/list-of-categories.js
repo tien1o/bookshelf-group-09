@@ -1,4 +1,4 @@
-import { getCategories, getBooksByCategory } from '../js/getcategories';
+import { getCategories } from '../js/getcategories';
 import { booksCategory } from './apiBooks';
 import { renderAllCategories } from './section-main-books';
 
