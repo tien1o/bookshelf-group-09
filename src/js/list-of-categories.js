@@ -7,7 +7,7 @@ const listOfCategories = document.querySelector('.categories__list');
 getCategories().then(response => {
   const sortedCategories = response
     .map(categorie => {
-      return `<li class="categories__item data-category-name=${categorie.list_name}>${categorie.list_name}</li>`;
+      return `<li class="categories__item">${categorie.list_name}</li>`;
     })
     .sort()
     .join('');
@@ -17,8 +17,6 @@ getCategories().then(response => {
 });
 
 function onCategoryClick(evt) {
-  evt.preventDefault();
-
   const activeCategorie = document.querySelector('.active__category');
   activeCategorie.classList.remove('active__category');
   evt.target.classList.add('active__category');
