@@ -18,7 +18,6 @@ getCategories().then(response => {
 
 function onCategoryClick(evt) {
   evt.preventDefault();
-<<<<<<< Updated upstream
 
   const activeCategorie = document.querySelector('.active__category');
   activeCategorie.classList.remove('active__category');
@@ -50,44 +49,6 @@ function onCategoryClick(evt) {
           _id,
         }) => {
           return `<li class='book-card__item'>
-=======
-  const categoryName = evt.target.dataset.categoryName;
-  if (!categoryName) {
-    return;
-  }
-  const activeCategorie = document.querySelector('.active__category');
-  activeCategorie.classList.remove('active__category');
-  const currentCategory = document.querySelector(
-    `[data-category-name="${categoryName}"]`
-  );
-  currentCategory.classList.add('active__category');
-}
-
-let mainTitle = document.createElement('h1');
-const conteinerCategoryBooks = document.createElement('ul');
-mainTitle.classList.add('bookcase__title');
-mainTitle.innerHTML = normalizeMainTitle(categoryName);
-conteinerCategoryBooks.classList.add('bookshelf__list', 'list');
-if (categoryName === 'All categories') {
-  renderAllCategories();
-  return;
-}
-booksCategory(categoryName).then(data => {
-  console.log(data);
-  const mainSectionsBooks = document.querySelector('.bookcase');
-  const booksList = data
-    .map(
-      ({
-        book_image,
-        book_image_height,
-        book_image_width,
-        author,
-        title,
-        buy_links,
-        _id,
-      }) => {
-        return `<li class='book-card__item'>
->>>>>>> Stashed changes
 <a class='book-card__link' href='#' data-id='${_id}'>
 <div class='book-card__wrapper'>
 <img
@@ -107,7 +68,6 @@ height = '${book_image_height}'
 <p class='book-card__author'>${author ? author : 'Unknown author'}</p>
 </div>
 </li>`;
-<<<<<<< Updated upstream
         }
       )
       .join('');
@@ -117,16 +77,6 @@ height = '${book_image_height}'
     mainSectionsBooks.appendChild(conteinerCategoryBooks);
   });
 }
-=======
-      }
-    )
-    .join('');
-  conteinerCategoryBooks.innerHTML = booksList;
-  mainSectionsBooks.innerHTML = '';
-  mainSectionsBooks.appendChild(mainTitle);
-  mainSectionsBooks.appendChild(conteinerCategoryBooks);
-});
->>>>>>> Stashed changes
 
 function normalizeMainTitle(title) {
   let lastWordCategoryName = title.split(' ');
