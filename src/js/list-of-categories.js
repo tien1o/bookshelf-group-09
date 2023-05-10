@@ -17,8 +17,6 @@ getCategories().then(response => {
 });
 
 function onCategoryClick(evt) {
-  evt.preventDefault();
-
   const activeCategorie = document.querySelector('.active__category');
   activeCategorie.classList.remove('active__category');
   evt.target.classList.add('active__category');
@@ -89,4 +87,3 @@ function normalizeMainTitle(title) {
   let innerCategoryName = categoryName.join(' ');
   return `${innerCategoryName} <span class="bookcase__filter">${lastWordCategoryName}</span>`;
 }
-//
