@@ -5,22 +5,14 @@
       &__cda {
         margin-bottom: 40px;
       }
-    margin-top: 40px;
-      
-    
-}
-
-.bookcase-text {
-    margin-bottom: 40px;
 }
 .book-card__author {
-    margin-top: 4px;
+    padding-top: 4px;
 }
-
 
 .book-card__list {
     display: grid;
-    margin-top: 40px;
+    padding-top: 40px;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     row-gap: 40px;
