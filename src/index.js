@@ -20,3 +20,7 @@ import CategoryList from './js/list-of-categories';
 import ScrollUp from './js/scrollup';
 // Switcher theme
 import SwitcherTheme from './js/switcher-theme';
+// load
+import Loader from './js/loader';
+// footer
+// import Footer from './js/footer';

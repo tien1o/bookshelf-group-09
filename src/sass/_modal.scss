@@ -38,6 +38,12 @@
 
   stroke: var(--primary-black);
 
+  &:hover {
+    stroke: var(--accent-color-blue);
+  }
+  &:focus {
+    stroke: var(--accent-color-blue);
+  }
   @media screen and (min-width: 768px) {
     width: 24px;
     height: 24px;
@@ -77,9 +83,6 @@
     margin-right: 24px;
     margin-bottom: 0;
   }
-}
-
-.book-descr-inf {
 }
 
 .book-title {
@@ -129,7 +132,7 @@
   margin-bottom: 22px;
 }
 .links-group {
-  display: flex; 
+  display: flex;
 }
 
 .links {
@@ -166,7 +169,7 @@
 }
 
 .order-btn-remove-state {
- font-family: 'DM Sans';
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -204,8 +207,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  }
-
+}
 
 .text-input {
   width: 242px;
