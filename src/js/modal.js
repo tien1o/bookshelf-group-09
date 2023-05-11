@@ -89,17 +89,19 @@ function bookInfoMarkup({ book_image, title, author, description, buy_links }) {
   const bookShopUrl = buy_links[0].url;
 
   return `
-      <img class='book-img' src="${
+      <img class='book_modal-book-img' src="${
         book_image ? book_image : './src/images/without-Image/noImage-Large.png'
       }" alt='Book image'>
-    <div class='book-descr-inf'>
-    <p class='book-title'>${title ? title : 'No title.'}</p>
-    <p class='book-author'>${author ? author : 'No author.'}</p>
-    <p class='book-description'>${description ? description : 'No description.'}</p>
-    <ul class='links-group'>
-    <li class='links'><a href=${amazonUrl} target="_blank"> <img  src='${amazon}' srcset="${amazon} 1x, ${amazon2x} 2x" alt ='Amazon Icon'></a></li>
-    <li class='links'><a href=${appleUrl} target="_blank"> <img  src='${apple}' srcset="${apple} 1x, ${apple2x} 2x" alt ='Apple Icon'></a></li>
-    <li class='links'><a href=${bookShopUrl} target="_blank"> <img  src='${bookShop}' srcset="${bookShop} 1x, ${bookShop2x} 2x" alt ='Book Shop Icon'></a></li>
+    <div class='book_modal-book-descr-inf'>
+    <p class='book_modal-book-title'>${title ? title : 'No title.'}</p>
+    <p class='book_modal-book-author'>${author ? author : 'No author.'}</p>
+    <p class='book_modal-book-description'>${
+      description ? description : 'No description.'
+    }</p>
+    <ul class='book_modal-links-group'>
+    <li class='book_modal-links'><a href=${amazonUrl} target="_blank"> <img  src='${amazon}' srcset="${amazon} 1x, ${amazon2x} 2x" alt ='Amazon Icon'></a></li>
+    <li class='book_modal-links'><a href=${appleUrl} target="_blank"> <img  src='${apple}' srcset="${apple} 1x, ${apple2x} 2x" alt ='Apple Icon'></a></li>
+    <li class='book_modal-links'><a href=${bookShopUrl} target="_blank"> <img  src='${bookShop}' srcset="${bookShop} 1x, ${bookShop2x} 2x" alt ='Book Shop Icon'></a></li>
     </ul>
     </div>
        `;
