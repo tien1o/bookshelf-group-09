@@ -22,7 +22,7 @@ import ScrollUp from './js/scrollup';
 import SwitcherTheme from './js/switcher-theme';
 // load
 import Loader from './js/loader';
-// footer
-// import Footer from './js/footer';
 // Autorization
 import Registration from './js/modal-regietr';
+import './js/firebase-config';
+import './js/firebase-user';
