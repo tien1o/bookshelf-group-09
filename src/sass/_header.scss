@@ -82,18 +82,6 @@
   bottom: 8.33%;
 }
 
-/* .switcher {
-    width: 40px;
-    height: 20px;
-    left: 0%;
-  right: 0%;
-  top: 8.33%;
-  bottom: 8.33%;
-  
-  background: linear-gradient(180deg, #4F2EE8 0%, #DCDCDC 100%);
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
-   } */
-
 .mobile-menu-open {
   margin-left: 14px;
   width: 28px;
@@ -106,9 +94,9 @@
   color: #4f2ee8;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 375px) {
   .container-header {
-    width: 426px;
+    width: 375px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -184,107 +172,16 @@
 
 // SWITCHER Перемикач теми
 
-.switcher {
-  width: 40px;
-  height: 20px;
-  border: 0;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: 14px;
-  padding: 0;
-  display: flex;
-  position: relative;
-}
-
-.switcherradio {
-  width: 20px;
-  height: 20px;
-  -ms-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  outline: 0;
-
-  .header__container {
+  .switcher {
+    width: 40px;
+    height: 20px;
+    border: 0;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 14px;
+    padding: 0;
     display: flex;
-    align-items: center;
-
-    border: 1.5px solid #111111;
-    border-radius: 0px 0px 8px 8px;
-    background-color: var(--header-bg-color);
-  }
-
-  // Logotype / логотип
-
-  .logotype {
-    padding-top: 18px;
-    padding-bottom: 18px;
-
-    @media screen and (min-width: 768px) {
-      padding-top: 22px;
-      padding-bottom: 22px;
-      margin-right: 32px;
-    }
-
-    @media screen and (min-width: 1440px) {
-      padding-top: 22px;
-      padding-bottom: 22px;
-      margin-right: 24px;
-    }
-  }
-
-  .logotype__logo-img {
-    background-color: #111111;
-    fill: #eac645;
-  }
-
-  // Navigation / меню
-
-  .navigation {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    @media screen and (min-width: 1440px) {
-      gap: 24px;
-    }
-  }
-
-  .navigation__item {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px 16px;
-    gap: 10px;
-
-    width: 72px;
-    height: 34px;
-  }
-  .current {
-    background: #eac645;
-    border-radius: 36px;
-  }
-
-  // checkbox + username button
-
-  .username {
-    padding-top: 18px;
-    padding-bottom: 18px;
-
-    @media screen and (min-width: 768px) {
-      padding-top: 22px;
-      padding-bottom: 22px;
-      margin-right: 32px;
-    }
-
-    @media screen and (min-width: 1440px) {
-      padding-top: 22px;
-      padding-bottom: 22px;
-      margin-right: 24px;
-    }
+    position: relative;
   }
 
   .switcher__bg {
@@ -331,4 +228,4 @@
     font-size: 100%;
     line-height: 1.15;
   }
-}
+
