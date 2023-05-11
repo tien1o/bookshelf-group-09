@@ -38,9 +38,9 @@ function onCategoryClick(evt) {
 
   let mainTitle = document.createElement('h1');
   const categoryBooksList = document.createElement('ul');
-  mainTitle.classList.add('bookcase__title');
+  mainTitle.classList.add('bookcase__title', 'bookcase-text');
   mainTitle.innerHTML = normalizeMainTitle(categoryName);
-  categoryBooksList.classList.add('bookshelf__list', 'list');
+  categoryBooksList.classList.add('bookshelf__content', 'book-card__list');
 
   if (categoryName === 'All categories') {
     renderAllCategories();
