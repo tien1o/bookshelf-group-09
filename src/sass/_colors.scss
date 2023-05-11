@@ -1,6 +1,8 @@
 :root {
+  --primary-color: #ffffff;
   --header-bg-color: #ffffff;
   --primary-text-color: #111111;
+  --secondary-black: #202024;
   --body-bg-color: #f6f6f6;
   --categories-links-active-color: #4f2ee8;
   --categories-links-color: rgba(17, 17, 17, 0.6);
@@ -19,8 +21,10 @@
 }
 
 :root.dark {
+  --primary-color: #ffffff;
   --header-bg-color: #111111;
   --primary-text-color: #ffffff;
+  --secondary-black: #202024;
   --body-bg-color: #202024;
   --categories-links-active-color: #eac645;
   --categories-links-color: rgba(255, 255, 255, 0.6);
@@ -41,12 +45,12 @@
 // :root {
 //   // Text colors
 //   --primary-white: #ffffff;
-//   --primary-black: #111111;
+//   --primary-text-color: #111111;
 //   --secondary-black: #202024;
 //   --category-and-autor-color: #b4afaf;
 
 //   // Accents and buttons colors
-//   --accent-color-blue: #4f2ee8;
+//   --categories-links-active-color: #4f2ee8;
 //   --accent-color-yellow: #eac645;
 
 //   // backdrop-color

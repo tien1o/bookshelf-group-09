@@ -24,3 +24,5 @@ import SwitcherTheme from './js/switcher-theme';
 import Loader from './js/loader';
 // footer
 // import Footer from './js/footer';
+// Autorization
+import Registration from './js/modal-regietr';
