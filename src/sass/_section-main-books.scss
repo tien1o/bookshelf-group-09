@@ -4,7 +4,7 @@
   line-height: 1.1875;
   letter-spacing: -0.04em;
 
-  color: var(--primary-text-color);
+  color: var(--primary-black);
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
@@ -16,7 +16,7 @@
 }
 
 .bookcase__filter {
-  color: var(--categories-links-active-color);
+  color: var(--accent-color-blue);
 }
 
 .book-card__list {
@@ -99,7 +99,7 @@
   width: 100%;
   height: 70px;
 
-  color: var(--header-bg-color);
+  color: var(--primary-white);
   background: var(--accent-color-yellow);
   border-radius: 0px 0px 8px 8px;
 
@@ -123,7 +123,7 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
 
-  color: var(--primary-text-color);
+  color: var(--primary-black);
   margin-bottom: 4px;
 }
 
@@ -149,17 +149,17 @@
   text-transform: uppercase;
   font-weight: 700;
 
-  border: 2px solid var(--categories-links-active-color);
+  border: 2px solid var(--accent-color-blue);
   border-radius: 40px;
 
   transition: color, background-color 250ms var(--transition-cubic);
 
   &:hover {
-    background-color: var(--categories-links-active-color);
-    color: var(--header-bg-color);
+    background-color: var(--accent-color-blue);
+    color: var(--primary-white);
   }
   &:focus {
-    background-color: var(--categories-links-active-color);
-    color: var(--header-bg-color);
+    background-color: var(--accent-color-blue);
+    color: var(--primary-white);
   }
 }

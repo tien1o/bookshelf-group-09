@@ -20,8 +20,9 @@
   width: 335;
   height: auto;
   padding: 40px 24px;
-  background: var(--body-bg-color);
-  border: 2px solid var(--primary-text-color);
+
+  background: var(--primary-white);
+  border: 2px solid var(--primary-black);
   border-radius: 18px;
   transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -36,13 +37,13 @@
   width: 28px;
   height: 28px;
 
-  stroke: var(--primary-text-color);
+  stroke: var(--primary-black);
 
   &:hover {
-    stroke: var(--categories-links-active-color);
+    stroke: var(--accent-color-blue);
   }
   &:focus {
-    stroke: var(--categories-links-active-color);
+    stroke: var(--accent-color-blue);
   }
   @media screen and (min-width: 768px) {
     width: 24px;
@@ -93,7 +94,7 @@
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.04em;
-  color: var(--primary-text-color);
+  color: var(--primary-black);
   margin-bottom: 4px;
 
   @media screen and (min-width: 768px) {
@@ -128,7 +129,7 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.04em;
-  color: var(--primary-text-color);
+  color: var(--primary-black);
   margin-bottom: 22px;
 }
 .links-group {
@@ -153,9 +154,9 @@
   text-align: center;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: var(--primary-text-color);
+  color: var(--primary-black);
   padding: 14px;
-  border: 2px solid var(--categories-links-active-color);
+  border: 2px solid var(--accent-color-blue);
   border-radius: 40px;
   background-color: var(--body-bg-color);
   width: 211px;
@@ -177,9 +178,9 @@
   text-align: center;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: var(--primary-text-color);
+  color: var(--primary-black);
   padding: 14px;
-  border: 2px solid var(--categories-links-active-color);
+  border: 2px solid var(--accent-color-blue);
   border-radius: 40px;
   background-color: var(--body-bg-color);
   margin-bottom: 8px;
@@ -199,6 +200,10 @@
 .order-btn-remove-state:focus {
   color: var(--body-bg-color);
   background-color: var(--categories-links-active-color);
+
+  color: var(--primary-white);
+  background-color: var(--accent-color-blue);
+
   cursor: pointer;
 }
 
