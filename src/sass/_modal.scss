@@ -71,7 +71,7 @@
   }
 }
 
-.book-img {
+.book_modal-book-img {
   width: 287px;
   height: 408px;
   margin-bottom: 14px;
@@ -85,7 +85,7 @@
   }
 }
 
-.book-title {
+.book_modal-book-title {
   width: 200px;
   font-family: 'DM Sans';
   font-style: normal;
@@ -103,7 +103,7 @@
   }
 }
 
-.book-author {
+.book_modal-book-author {
   font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
@@ -121,7 +121,7 @@
   }
 }
 
-.book-description {
+.book_modal-book-description {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
@@ -131,17 +131,18 @@
   color: var(--primary-text-color);
   margin-bottom: 22px;
 }
-.links-group {
+.book_modal-links-group {
   display: flex;
 }
 
-.links {
+.book_modal-links {
   height: 36px;
   margin-right: 20px;
   display: flex;
   justify-content: center;
   filter: grayscale(100%);
   object-fit: contain;
+  align-items: center;
 }
 
 .order-btn {

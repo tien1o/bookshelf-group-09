@@ -17,7 +17,7 @@ getCategories().then(response => {
        <li class='categories__item active__category' data-category-name='All categories'>All categories</li>`;
   listOfCategories.insertAdjacentHTML('beforeend', sortedCategories);
   const allItems = document.querySelectorAll('.categories__item');
-  allItems.forEach(() => addEventListener('click', onCategoryClick));
+  allItems.forEach((item) => item.addEventListener('click', onCategoryClick));
 });
 
 function onCategoryClick(evt) {
