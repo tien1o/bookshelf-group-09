@@ -24,5 +24,5 @@ import SwitcherTheme from './js/switcher-theme';
 import Loader from './js/loader';
 // Autorization
 import Registration from './js/modal-regietr';
-import './js/firebase-config';
-import './js/firebase-user';
+// import './js/firebase-config';
+// import './js/firebase-user';
