@@ -1,19 +1,16 @@
-<<<<<<< HEAD
 <header class="section-header">
   <div class="container-header">
     <a href="#" class="logo-img">
-      <svg class="js-logo-light-svg" width="83" height="28">
-        <use href="/src/images/logo.svg#icon-logo"></use>
-      </svg>
+      <img src="./images/header/logo@2x.png" alt="" />
     </a>
     <nav>
       <ul class="style-nav">
         <li class="nav-home">
-          <a href="./index.html">HOME</a>
+          <a href="./partials/section-main-books.html">HOME</a>
         </li>
         <li class="nav-hopping">
           <a href="./shopping-list.html" target="_blank">SHOPPING LIST</a>
-          <img src="./images/header/uil_cart.svg" alt="" class="hopping-img" />
+          <img src="#" alt="" class="hopping-img" />
         </li>
       </ul>
     </nav>
@@ -38,53 +35,26 @@
       <div class="switcher__bg"></div>
       <div class="switcher__status"></div>
     </fieldset>
-
-    <button
-      class="sign-up-btn"
-      type="button"
-      data-modal-open
-      aria-label="sign in"
-    >
-      <span class="sign-up-btn__text">Sign up</span>
-      <svg class="sign-up-btn__icon" width="20" height="20">
-        <use href="./images/icons.svg#golder-arrow-right"></use>
-      </svg>
-    </button>
-
-    <!-- User bar-->
-    <ul class="user-bar js-user-bar visually-hidden">
-      <li class="user-bar__item">
-        <!-- User-bar-btn -->
-        <button
-          class="user-bar-btn js-user-bar-btn"
-          type="button"
-          aria-label="user bar button"
-        >
-          <svg class="user-bar-btn__avatar-icon" width="37" height="37">
-            <use href="./images/icons.svg#user-ico"></use>
-          </svg>
-          <span class="user-bar-btn__text"></span>
-          <svg class="user-bar-btn__arrow-icon" width="23" height="26">
-            <use href="./images/icons.svg#user-caret-down"></use>
-          </svg>
-        </button>
-        <ul class="dropdown">
-          <li class="dropdown-list__item">
-            <!-- Log-out-btn -->
-            <button
-              class="log-out-btn js-log-out-btn"
-              type="button"
-              aria-label="Log out"
-            >
-              <span class="log-out-btn__text">Log out</span>
-              <svg class="log-out-btn__icon" width="20" height="20">
-                <use href="./images/icons.svg#golder-arrow-right"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <!-- <fieldset class="switcher" aria-label="color theme switcher">
+      <legend class="switcherlegend visually-hidden">Схема</legend>
+      <input
+        class="switcherradio switcherradio--light"
+        type="radio"
+        name="color-scheme"
+        value="light"
+        aria-label="Light color scheme"
+        checked
+      />
+      <input
+        class="switcherradio switcherradio--dark"
+        type="radio"
+        name="color-scheme"
+        value="dark"
+        aria-label="Dark color scheme"
+      />
+      <div class="switcherbg"></div>
+      <div class="switcher__status"></div>
+    </fieldset> -->
 
     <button type="button" class="mobile-menu-open" data-menu-open>
       <svg
@@ -98,119 +68,3 @@
     </button>
   </div>
 </header>
-=======
-<header class="container">
-  <div class="header__container">
-    <!-- Logotype-->
-    <div class="logotype">
-      <a href="#" class="logotype__logo">
-        <svg class="logotype__logo-img" width="24" height="24">
-          <use href="./images/icons.svg#icon-logo"></use>
-        </svg>
-      </a>
-
-      <a href="#" class="logotype__name">
-        <img
-          src="./images/header/Bookshelf.png"
-          alt="page name"
-          class="logotype__name__img"
-          width="77"
-          height="13"
-        />
-      </a>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">
-            <span>Home</span>
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">
-            <span>Shopping list</span>
-            <svg width="20" height="20">
-              <use href="./images/icons.svg#icon-bag"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- checkbox (перемикач) + username-->
-    <div class="username">
-      <fieldset class="username__checkbox">
-        <legend class="visually-hidden">Зміна кольору</legend>
-        <input type="radio" name="color-scheme" value="light" />
-        <input type="radio" name="color-scheme" value="dark" />
-      </fieldset>
-
-      <button type="button" class="username__button">
-        <svg width="37" height="37" class="username__svg">
-          <use href="./images/icons.svg#icon-user"></use>
-        </svg>
-        <span>Stephen</span>
-        <svg width="20" height="20" class="username__svg-arrow">
-          <use href="./images/icons.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Burger menu  для мобільного-->
-    <div class="mobile-menu">
-      <button type="button" class="mobile-menu__button">
-        <svg width="28" height="28" class="mobile-menu__icon">
-          <use href="./images/icons.svg#icon-align-left"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-   </nav>
-
-
-
-  <!-- Modal window -->
-  <div class="modal-window">
-    <ul class="modal-window__list">
-      <li class="modal-window__items">
-        <svg width="37" height="37" class="username__svg">
-          <use href="./images/icons.svg#icon-user"></use>
-        </svg>
-        <span>Stephen</span>
-      </li>
-      <li class="modal-window__items">
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">
-                <span>Shopping list</span>
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#icon-bag"></use>
-                </svg>
-              </a>
-            </li>
-        </ul> 
-    </div>
-</header>
-          </ul>
-        </nav>
-      </li>
-      <li class="modal-window__items">
-        <button type="button" class="mobile-menu__button">
-          <svg width="28" height="28" class="mobile-menu__icon">
-            <use href="./images/icons.svg#icon-align-left"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </div>
-</header>
-
->>>>>>> parent of f1e4f34 (Merge pull request #34 from tien1o/support-ukraine)
