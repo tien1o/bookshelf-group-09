@@ -1,0 +1,227 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+}
+
+.backdrop.is-hidden {
+  opacity: 0%;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 335;
+  height: auto;
+  padding: 40px 24px;
+  background: var(--primary-white);
+  border: 2px solid var(--primary-text-color);
+  border-radius: 18px;
+  transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 579px;
+    height: auto;
+    padding: 40px;
+  }
+}
+
+.close-icon {
+  width: 28px;
+  height: 28px;
+
+  stroke: var(--primary-text-color);
+
+  &:hover {
+    stroke: var(--categories-links-active-color);
+  }
+  &:focus {
+    stroke: var(--categories-links-active-color);
+  }
+  @media screen and (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    top: 31px;
+    right: 31px;
+  }
+}
+
+.book-information {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.book-img {
+  width: 287px;
+  height: 408px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+
+  @media screen and (min-width: 768px) {
+    width: 192px;
+    height: 281px;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.book-title {
+  width: 200px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+}
+
+.book-author {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+
+  color: var(--category-and-autor-color);
+  margin-bottom: 18px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.book-description {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--primary-text-color);
+  margin-bottom: 22px;
+}
+.links-group {
+  display: flex;
+}
+
+.links {
+  height: 36px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  filter: grayscale(100%);
+  object-fit: contain;
+}
+
+.order-btn {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  padding: 14px;
+  border: 2px solid var(--categories-links-active-color);
+  border-radius: 40px;
+  background-color: var(--primary-white);
+  width: 211px;
+
+  @media screen and (min-width: 768px) {
+    width: 499px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.order-btn-remove-state {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  padding: 14px;
+  border: 2px solid var(--categories-links-active-color);
+  border-radius: 40px;
+  background-color: var(--primary-white);
+  margin-bottom: 8px;
+  width: 279px;
+
+  @media screen and (min-width: 768px) {
+    width: 499px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.order-btn:hover,
+.order-btn:focus,
+.order-btn-remove-state:hover,
+.order-btn-remove-state:focus {
+  color: var(--primary-white);
+  background-color: var(--categories-links-active-color);
+  cursor: pointer;
+}
+
+.order-btn-position {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.text-input {
+  width: 242px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  color: var(--backdrop-color);
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+  }
+}
