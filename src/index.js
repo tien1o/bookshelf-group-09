@@ -26,3 +26,7 @@ import Loader from './js/loader';
 // import Footer from './js/footer';
 // Autorization
 import Registration from './js/modal-regietr';
+// import FireBaseConfig from './js/firebase-config';
+// import FireBaseUser from './js/firebase-user';
+import './js/firebase-config';
+import './js/firebase-user';

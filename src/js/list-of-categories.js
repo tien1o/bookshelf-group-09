@@ -60,7 +60,7 @@ function onCategoryClick(evt) {
           buy_links,
           _id,
         }) => {
-          return `<li class='book-card__item'>
+          return `<li class='book-card__item' data-id=${_id}>
 <a class='book-card__link' href='#' data-id='${_id}'>
 <div class='book-card__wrapper'>
 <img
@@ -87,6 +87,14 @@ height = '${book_image_height}'
     mainSectionsBooks.innerHTML = '';
     mainSectionsBooks.appendChild(mainTitle);
     mainSectionsBooks.appendChild(categoryBooksList);
+
+    const bookElements = document.querySelectorAll('.book-card__item');
+    bookElements.forEach(el =>
+      el.addEventListener('click', event => {
+        event.preventDefault();
+        openModal(el);
+      })
+    );
   });
 }
 

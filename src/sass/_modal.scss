@@ -20,7 +20,7 @@
   width: 335;
   height: auto;
   padding: 40px 24px;
-  background: var(--primary-white);
+  background: var(--body-bg-color);
   border: 2px solid var(--primary-text-color);
   border-radius: 18px;
   transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -157,7 +157,7 @@
   padding: 14px;
   border: 2px solid var(--categories-links-active-color);
   border-radius: 40px;
-  background-color: var(--primary-white);
+  background-color: var(--body-bg-color);
   width: 211px;
 
   @media screen and (min-width: 768px) {
@@ -181,7 +181,7 @@
   padding: 14px;
   border: 2px solid var(--categories-links-active-color);
   border-radius: 40px;
-  background-color: var(--primary-white);
+  background-color: var(--body-bg-color);
   margin-bottom: 8px;
   width: 279px;
 
@@ -197,7 +197,7 @@
 .order-btn:focus,
 .order-btn-remove-state:hover,
 .order-btn-remove-state:focus {
-  color: var(--primary-white);
+  color: var(--body-bg-color);
   background-color: var(--categories-links-active-color);
   cursor: pointer;
 }
