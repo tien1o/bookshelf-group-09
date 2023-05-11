@@ -48,47 +48,43 @@
   }
 }
 
-
 //Shopping-list styles
 
 .support-shop-list {
-@include less-then-desktop {
-  display: none;
-}
+  @include less-then-desktop {
+    display: none;
+  }
 }
 .container-general .shoplist {
-padding: 40px 20px;
-display: grid;
-row-gap: 40px;
+  padding: 40px 20px;
+  display: grid;
+  row-gap: 40px;
 
-grid-template-rows: none;
+  grid-template-rows: none;
 
-@include less-then-desktop {
-  display: flex;
-}
+  @include less-then-desktop {
+    display: flex;
+  }
 
-@include tablet {
-  padding: 40px 32px;
-  column-gap: 0;
-}
+  @include tablet {
+    padding: 40px 32px;
+    column-gap: 0;
+  }
 
-@include desktop {
-  grid-template-columns: 356px 996px;
-  row-gap: 100px;
-  column-gap: 40px;
-  padding: 40px 24px;
-}
-
+  @include desktop {
+    grid-template-columns: 356px 996px;
+    row-gap: 100px;
+    column-gap: 40px;
+    padding: 40px 24px;
+  }
 }
 
 // .shoplist {
-  
+
 //     padding: 40px 20px;
 //     display: grid;
 //     row-gap: 40px;
 //     grid-template-rows: none;
-
-
 
 //     @include less-then-desktop {
 //       display: flex;
@@ -106,7 +102,6 @@ grid-template-rows: none;
 //     }
 //   }
 
-
 .shoplist-header {
   letter-spacing: -0.04em;
   color: #111;
@@ -116,13 +111,10 @@ grid-template-rows: none;
   line-height: 1.1875;
 
   @media screen and (min-width: 768px) {
-  font-size: 48px;
-  line-height: 1.08333;
+    font-size: 48px;
+    line-height: 1.08333;
   }
 }
-
-
-
 
 .shoplist-list {
   display: grid;
@@ -135,7 +127,6 @@ grid-template-rows: none;
     margin-bottom: 20px;
   }
 }
-
 
 .shoplist-section {
   width: 100%;
@@ -162,287 +153,279 @@ grid-template-rows: none;
   }
 }
 
-
 .shoplist-background-text {
   width: 244px;
-  color: rgba(0, 0, 0, 0.6);;
-  letter-spacing: -.02em;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: -0.02em;
   text-align: center;
   font-size: 14px;
   line-height: 18px;
 
   @media screen and (min-width: 768px) {
-  width: 349px;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 24px; 
+    width: 349px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
- 
-
 }
-
 
 // Shoplist-cards
 
 .shopping-list-page-view {
-list-style: none;
+  list-style: none;
   display: grid;
   gap: 20px;
 }
 
 .shoplist-item {
-width: 100%;
-height: 362px;
-padding: 18px;
+  width: 100%;
+  height: 362px;
+  padding: 18px;
 
-list-style: none;
-position: relative;
-background-color: var(--header-bg-color);
-border: 2px solid #4f2ee866;
-border-radius: 16px;
+  list-style: none;
+  position: relative;
+  background-color: var(--primary-white);
+  border: 2px solid #4f2ee866;
+  border-radius: 16px;
 
-@media screen and (min-width: 768px) {
-  height: 213px;
-  padding: 22px;
-}
+  @media screen and (min-width: 768px) {
+    height: 213px;
+    padding: 22px;
+  }
 }
 
 .book-container {
-display: grid;
-grid-template-rows: 65px 70px 34px 141px;
-grid-template-columns: 98px 1fr;
-row-gap: 4px;
-column-gap: 20px;
+  display: grid;
+  grid-template-rows: 65px 70px 34px 141px;
+  grid-template-columns: 98px 1fr;
+  row-gap: 4px;
+  column-gap: 20px;
 
-@media screen and (min-width: 768px) {
-  grid-template-rows: 36px 71px 30px;
-  grid-template-columns: 116px 174px 318px;
-  row-gap: 14px;
-  column-gap: 24px;
-}
-@media screen and (min-width: 1440px) {
-  grid-template-rows: 36px 65px 36px;
-  grid-template-columns: 116px 174px 610px;
-}
+  @media screen and (min-width: 768px) {
+    grid-template-rows: 36px 71px 30px;
+    grid-template-columns: 116px 174px 318px;
+    row-gap: 14px;
+    column-gap: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-rows: 36px 65px 36px;
+    grid-template-columns: 116px 174px 610px;
+  }
 }
 
 .book-img-container {
-max-width: 98px;
-max-height: 139px;
+  max-width: 98px;
+  max-height: 139px;
 
-grid-row: 1/3;
-order: 1;
+  grid-row: 1/3;
+  order: 1;
 
-border-radius: 8px;
-overflow: hidden;
-outline: 1px solid #b4afaf;
+  border-radius: 8px;
+  overflow: hidden;
+  outline: 1px solid #b4afaf;
 
-@media screen and (min-width: 768px) {
-  max-width: 116px;
-  max-height: 165px;
+  @media screen and (min-width: 768px) {
+    max-width: 116px;
+    max-height: 165px;
 
-  grid-row: 1/4;
-}
+    grid-row: 1/4;
+  }
 }
 
 .book-img {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 
-object-fit: cover;
-object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .book-title {
-margin-bottom: 4px;
-padding-right: 40px;
+  margin-bottom: 4px;
+  padding-right: 40px;
 
-color: var(--primary-text-color);
+  color: var(--primary-text-color);
 
-font-size: 16px;
-font-weight: 700;
-line-height: 1.1;
-letter-spacing: -0.04em;
-text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
 
-@media screen and (max-width: 767.98px) {
-  max-width: 177px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
+  @media screen and (max-width: 767.98px) {
+    max-width: 177px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
 }
 
 .book-author {
-grid-row: 3/4;
-grid-column: 1/3;
-order: 5;
+  grid-row: 3/4;
+  grid-column: 1/3;
+  order: 5;
 
-color: #b4afaf;
+  color: #b4afaf;
 
-font-style: italic;
-font-size: 12px;
-line-height: 1.2;
-letter-spacing: -0.04em;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
 
-@media screen and (min-width: 768px) {
-  grid-row: 3;
-  grid-column: 2;
-  align-self: end;
-}
+  @media screen and (min-width: 768px) {
+    grid-row: 3;
+    grid-column: 2;
+    align-self: end;
+  }
 }
 
 .book-descr-inf {
-display: contents;
+  display: contents;
 }
 
 .book-description-shoplist {
-grid-row: 4/5;
-grid-column: 1/3;
-align-self: end;
-order: 7;
-height: 100%;
+  grid-row: 4/5;
+  grid-column: 1/3;
+  align-self: end;
+  order: 7;
+  height: 100%;
 
-color: var(--primary-text-color);
+  color: var(--primary-text-color);
 
-font-size: 14px;
-line-height: 1.3;
-letter-spacing: -0.04em;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
 
-@media screen and (min-width: 768px) {
-  grid-row: 2;
-  grid-column: 2/4;
-  order: 4;
-  padding-top: 0;
-}
-@media screen and (min-width: 1440px) {
-  align-self: start;
-}
+  @media screen and (min-width: 768px) {
+    grid-row: 2;
+    grid-column: 2/4;
+    order: 4;
+    padding-top: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    align-self: start;
+  }
 }
 
 .links-group {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-align-self: start;
-order: 4;
-
-@media screen and (min-width: 768px) {
-  justify-content: end;
-
-  grid-row-start: 3;
-  align-self: end;
-  order: 9;
-}
-@media screen and (min-width: 1440px) {
   align-self: start;
-}
+  order: 4;
+
+  @media screen and (min-width: 768px) {
+    justify-content: end;
+
+    grid-row-start: 3;
+    align-self: end;
+    order: 9;
+  }
+  @media screen and (min-width: 1440px) {
+    align-self: start;
+  }
 }
 
 .book-links-shoplist {
-mix-blend-mode: luminosity;
+  mix-blend-mode: luminosity;
 
-transition-property: filter;
-transition-duration: 250ms;
-transition-timing-function: ease-in-out;
-&:hover,
-&:focus {
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
-}
+  transition-property: filter;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
+  }
 }
 .book-links-shoplist:not(:last-child) {
-margin-right: 14px;
+  margin-right: 14px;
 
-@media screen and (min-width: 768px) {
-  margin-right: 16px;
-}
+  @media screen and (min-width: 768px) {
+    margin-right: 16px;
+  }
 }
 
 .deliteBookFromShopList {
-position: absolute;
-top: 14px;
-right: 14px;
-padding: 0;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 0;
 
-background-color: #4F2EE8;
-border-radius: 50%;
-border: none;
+  background-color: #4f2ee8;
+  border-radius: 50%;
+  border: none;
 
-cursor: pointer;
+  cursor: pointer;
 
-@media screen and (min-width: 768px) {
-  top: 24px;
-  right: 24px;
+  @media screen and (min-width: 768px) {
+    top: 24px;
+    right: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
 }
-
-
-&:hover,
-&:focus {
-  transform: scale(1.2);
-}
-}
-
 
 // Pagination button
 .pagination-btn {
-text-align: center;
-margin: 14px 0 12px 45px;
-line-height: normal;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 8px;
-position: absolute;
+  text-align: center;
+  margin: 14px 0 12px 45px;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
 
-height: 44px;
+  height: 44px;
 
-@media screen and (min-width: 768px) {
-  width: 446px;
-  margin: 14px 0 12px 100px;
-  gap: 24px;
-}
+  @media screen and (min-width: 768px) {
+    width: 446px;
+    margin: 14px 0 12px 100px;
+    gap: 24px;
+  }
 
-@media screen and (min-width: 1440px) {
-  margin: 14px 0 12px 300px;
-  
-}
-
+  @media screen and (min-width: 1440px) {
+    margin: 14px 0 12px 300px;
+  }
 }
 
 .page-btn {
-border: 2px solid #111111;
+  border: 2px solid #111111;
   border-radius: 50%;
   color: #111111;
   background-color: #fff;
   width: 44px;
   height: 44px;
   font-weight: 700;
-font-size: 18px;
-line-height: 22px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
-.prev-btn{
-box-sizing: border-box;
+.prev-btn {
+  box-sizing: border-box;
 
-top: 0px;
-bottom: 0px;
-background: #111111;
-border: 2px solid #111111;
-width: 44px;
-height: 44px;
-border-radius: 50%;
-color: #fff;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
+  top: 0px;
+  bottom: 0px;
+  background: #111111;
+  border: 2px solid #111111;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .next-btn {
-box-sizing: border-box;
+  box-sizing: border-box;
   width: 44px;
   height: 44px;
   background: #eac645;
@@ -450,6 +433,6 @@ box-sizing: border-box;
   border-radius: 50%;
   color: #111;
   font-weight: 700;
-font-size: 18px;
-line-height: 22px;
+  font-size: 18px;
+  line-height: 22px;
 }
