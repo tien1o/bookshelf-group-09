@@ -1,0 +1,70 @@
+<header class="section-header">
+  <div class="container-header">
+    <a href="#" class="logo-img">
+      <img src="./images/header/logo.png" alt="" />
+    </a>
+    <nav>
+      <ul class="style-nav">
+        <li class="nav-home">
+          <a href="./partials/section-main-books.html">HOME</a>
+        </li>
+        <li class="nav-hopping">
+          <a href="./shopping-list.html" target="_blank">SHOPPING LIST</a>
+          <img src="./images/header/uil_cart.svg" alt="" class="hopping-img" />
+        </li>
+      </ul>
+    </nav>
+    
+    <fieldset class="switcher" aria-label="color theme switcher">
+      <legend class="switcher__legend visually-hidden">Смена</legend>
+      <input
+        class="switcherradio switcher__radio--light"
+        type="radio"
+        name="color-scheme"
+        value="light"
+        aria-label="Light color scheme"
+        checked
+      />
+      <input
+        class="switcher__radio--dark"
+        type="radio"
+        name="color-scheme"
+        value="dark"
+        aria-label="Dark color scheme"
+      />
+      <div class="switcher__bg"></div>
+      <div class="switcher__status"></div>
+    </fieldset> 
+     <!-- <fieldset class="switcher" aria-label="color theme switcher">
+      <legend class="switcherlegend visually-hidden">Схема</legend>
+      <input
+        class="switcherradio switcherradio--light"
+        type="radio"
+        name="color-scheme"
+        value="light"
+        aria-label="Light color scheme"
+        checked
+      />
+      <input
+        class="switcherradio switcherradio--dark"
+        type="radio"
+        name="color-scheme"
+        value="dark"
+        aria-label="Dark color scheme"
+      />
+      <div class="switcherbg"></div>
+      <div class="switcher__status"></div>
+    </fieldset> -->
+
+    <button type="button" class="mobile-menu-open" data-menu-open>
+      <svg
+        class="mobile-menu-open-icon mobile-menu__button"
+        width="32"
+        height="22"
+      > 
+        <!-- <use href="./images/burger.svg"></use>  -->
+        <use href="./images/icons.svg#icon-align-left"></use>
+      </svg>
+    </button>
+  </div>
+</header>
