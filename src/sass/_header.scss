@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* HEADER */
 
 .container-header {
@@ -206,6 +207,89 @@
   appearance: none;
   cursor: pointer;
   outline: 0;
+=======
+.header__container {
+  display: flex;
+  align-items: center;
+
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+  background-color: var(--header-bg-color);
+}
+
+// Logotype / логотип
+
+.logotype {
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-right: 24px;
+  }
+}
+
+.logotype__logo-img {
+  background-color: #111111;
+  fill: #eac645;
+}
+
+// Navigation / меню
+
+.navigation {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
+  }
+}
+
+.navigation__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
+  gap: 10px;
+
+  width: 72px;
+  height: 34px;
+}
+.current {
+  background: #eac645;
+  border-radius: 36px;
+}
+
+// checkbox + username button
+
+.username {
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-right: 24px;
+  }
+>>>>>>> Stashed changes
 }
 
 .switcher__bg {
