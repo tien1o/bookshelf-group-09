@@ -8,9 +8,10 @@
   margin-top: 40px;
 }
 
-.bookcase-text {
+.bookshelf-title {
   margin-bottom: 40px;
 }
+
 .book-card__author {
   margin-top: 4px;
   color: var(--categories-links-color);
@@ -35,6 +36,7 @@
     grid-template-columns: repeat(5, 1fr);
     column-gap: 25px;
     margin-bottom: 32px;
+
   }
 }
 
