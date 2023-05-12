@@ -153,8 +153,7 @@ function checkUserAuth() {
       });
       userBar.classList.remove('visually-hidden');
       signUpHeaderBtn.classList.add('visually-hidden')
-      testBtn.classList.remove('is-hidden')
-      
+  
       localStorage.setItem('user', 'true');
     }
   });
@@ -172,7 +171,7 @@ function handelLogOutUserAccount() {
       backdrop.style.display = 'block';
       userBarBtnText.innerHTML = '';
 
-      testBtn.classList.add('is-hidden')
+      
       localStorage.removeItem('user');
       
     })
