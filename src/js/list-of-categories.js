@@ -17,10 +17,10 @@ getCategories().then(response => {
        <li class='categories__item active__category' data-category-name='All categories'>All categories</li>`;
   listOfCategories.insertAdjacentHTML('beforeend', sortedCategories);
   const allItems = document.querySelectorAll('.categories__item');
-  allItems.forEach((item) => item.addEventListener('click', onCategoryClick));
+  allItems.forEach(item => item.addEventListener('click', onCategoryClick));
 });
 
-function onCategoryClick(evt) {
+export function onCategoryClick(evt) {
   evt.preventDefault();
   const categoryName = evt.target.dataset.categoryName;
 
@@ -89,15 +89,13 @@ height = '${book_image_height}'
     mainSectionsBooks.appendChild(mainTitle);
     mainSectionsBooks.appendChild(categoryBooksList);
 
-        
- const bookElements = document.querySelectorAll('.book-card__item');
- bookElements.forEach(el =>
-   el.addEventListener('click', event => {
-     event.preventDefault();
-     openModal(el);
-   })
- );
-
+    const bookElements = document.querySelectorAll('.book-card__item');
+    bookElements.forEach(el =>
+      el.addEventListener('click', event => {
+        event.preventDefault();
+        openModal(el);
+      })
+    );
   });
 }
 
