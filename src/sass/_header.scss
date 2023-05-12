@@ -34,10 +34,7 @@ ul {
 
 .nav-home {
   margin-right: 24px;
-  width: 72px;
-  padding: 8px 8px 8px 8px;
   border-radius: 36px;
-  background: #eac645;
   text-align: center;
 
   font-family: 'DM Sans';
@@ -119,7 +116,7 @@ ul {
   }
 
   .nav-hopping {
-    margin-right: 104px;
+    margin-right: 74px;
   }
 
   .mobile-menu-open {
@@ -145,7 +142,7 @@ ul {
   }
 
   .nav-hopping {
-    margin-right: 746px;
+    margin-right: 720px;
   }
 
   .logo-img {
@@ -253,4 +250,12 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
+}
+
+.is-active-now {
+  color: #111;
+  background: #eac645;
+  border-radius: 36px;
+  padding: 8px 16px;
+  font-weight: 700;
 }

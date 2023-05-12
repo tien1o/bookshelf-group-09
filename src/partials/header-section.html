@@ -8,10 +8,12 @@
     <nav>
       <ul class="style-nav">
         <li class="nav-home">
-          <a href="./index.html">HOME</a>
+          <a class="js-main-page-link" href="./index.html">HOME</a>
         </li>
         <li class="nav-hopping">
-          <a href="./shopping-list.html">SHOPPING LIST</a>
+          <a class="js-list-page-link" href="./shopping-list.html"
+            >SHOPPING LIST</a
+          >
           <svg class="hopping-img" width="20" height="20">
             <use href="./images/icons.svg#icon-bag"></use>
           </svg>
@@ -85,68 +87,5 @@
         </ul>
       </li>
     </ul>
-
-    <button type="button" class="mobile-menu-open" data-menu-burger-open>
-      <svg
-        class="mobile-menu-open-icon menu-toggle mobile-menu__button"
-        width="32"
-        height="22"
-      >
-        <use href="./images/icons.svg#icon-align-left"></use>
-      </svg>
-    </button>
-  </div>
-
-  <div class="container-mb-menu data-burger-menu" id="mobile-menu">
-    <button type="button" class="mobile-menu-close" data-menu-burger-close>
-      <svg
-        class="mobile-menu-close-icon mobile-menu__button"
-        width="32"
-        height="22"
-      >
-        <use href="./images/icons.svg#icon-close"></use>
-      </svg>
-    </button>
-
-    <div class="mobile-menu-modal container">
-      <button class="signup-btn" type="button" aria-label="Sign up">
-        <span class="signup-btn-text">Sign up</span>
-        <svg class="signup-btn__icon" width="20" height="20">
-          <use href="./images/icons.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-      <div class="user-container display-none">
-        <svg class="user-icon" width="37" height="37">
-          <use href="./images/icons.svg#user-icon"></use>
-        </svg>
-        <p class="user-name">Stephen</p>
-      </div>
-      <nav class="mobile-list display-none">
-        <ul>
-          <li class="mobile-home-item">
-            <a class="mobile-home" href="./" aria-label="to home page">Home</a>
-          </li>
-          <!-- Вместо заглушки нужно добавить путь ./shopping-list.html -->
-          <li class="mobile-home-item">
-            <a class="mobile-shoplist" href="#" aria-label="to shopping list"
-              >Shopping list
-              <svg class="shoplist-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-bag"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <button
-        class="mobile-logout js-mobile-logout display-none"
-        type="submit"
-        aria-label="Log out"
-      >
-        Log out
-        <svg class="logout-icon" width="20" height="20">
-          <use href="./images/icons.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-    </div>
   </div>
 </header>
