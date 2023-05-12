@@ -1,5 +1,3 @@
-import bodyScrollLock from 'body-scroll-lock';
-
 (() => {
   const mobileBurgerMenu = document.querySelector('.data-burger-menu');
   const openBurgerBtn = document.querySelector('[data-menu-burger-open]');

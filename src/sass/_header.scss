@@ -171,6 +171,17 @@ ul {
   color: #4f2ee8;
 }
 
+.mobile-menu-close {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  padding: 0;
+  color: var(--light-body-background);
+  fill: var(--primary-text-color);
+  stroke: currentColor;
+  cursor: pointer;
+}
+
 .mobile-menu__button {
   border: 0;
   background-color: var(--light-body-background);
