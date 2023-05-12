@@ -12,7 +12,7 @@
   &::-webkit-scrollbar-thumb {
     height: 114px;
     border-radius: 12px;
-    background-color: #e0e0e0;
+    background-color: var(--categories-scroll-bar);
   }
 
   @media screen and (min-width: 768px) {
@@ -37,7 +37,7 @@
   font-size: 16px;
   line-height: 1.12;
   letter-spacing: -0.02em;
-  color: rgba(17, 17, 17, 0.6);
+  color: var(--categories-links-color);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,7 +47,7 @@
     cursor: pointer;
     font-weight: 700;
     text-transform: uppercase;
-    color: #4f2ee8;
+    color: var(--categories);
   }
 
   &:not(:last-child) {
@@ -66,5 +66,5 @@
 .active__category {
   font-weight: 700;
   text-transform: uppercase;
-  color: #4f2ee8;
+  color: var(--categories);
 }

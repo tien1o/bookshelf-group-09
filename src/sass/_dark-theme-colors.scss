@@ -1,10 +1,25 @@
-
-  :root.dark {
-	--primary-white: #111111;
-	--primary-text-color: #ffffff;
-	--body-bg-color: #202024;
+:root.dark {
+  --primary-text-color: #ffffff;
+  --body-bg-color: #202024;
   --accent-color-blue: #eac645;
-  --category-and-autor-color:
-  --secondary-black:
+  --category-and-autor-color: #b4afaf;
+  --secondary-black: #202024;
+  // backdrop-color
+  --backdrop-color: rgba(17, 17, 17, 0.4);
 
-  }
+  --category-and-autor-color: #b4afaf;
+  --header-bg-color: #111111;
+  --primary-text-color: #ffffff;
+  --body-bg-color: #202024;
+  --categories: #eac645;
+  --categories-links-active-color: #4f2ee8;
+  --categories-links-color: rgba(255, 255, 255, 0.6);
+  --categories-scroll-bar: rgba(17, 17, 17, 0.6);
+  --pop-up-bg-color: #202024;
+  --scrollbar-bg-color: #11111199;
+  --scrollbar-hower-bg-color: #111111;
+  --autorization-modal-border-color: #f6f6f6;
+  --autorization-form-btn-text-color: #202024;
+  --autorization-links-color: rgba(246, 246, 246, 0.5);
+  --shopping-list-text-color: rgba(0, 0, 0, 0.6);
+}

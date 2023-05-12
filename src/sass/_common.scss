@@ -40,6 +40,9 @@ ol {
 a {
   list-style: none;
   text-decoration: none;
+  color: var(--primary-text-color);
+  outline: none;
+  white-space: nowrap;
 }
 
 .list {

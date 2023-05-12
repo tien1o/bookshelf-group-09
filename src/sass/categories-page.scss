@@ -1,114 +1,112 @@
 .bookshelf-content {
-    &__item:not(:last-child) {
-        margin-bottom: 40px;
-      }
-      &__cda {
-        margin-bottom: 40px;
-      }
-    margin-top: 40px;
-      
-    
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  &__cda {
+    margin-bottom: 40px;
+  }
+  margin-top: 40px;
 }
 
 .bookcase-text {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .book-card__author {
-    margin-top: 4px;
+  margin-top: 4px;
+  color: var(--categories-links-color);
 }
 
-
 .book-card__list {
-    display: grid;
-    margin-top: 40px;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    row-gap: 40px;
-    grid-template-rows: fit-content(1%);
-    margin-bottom: 8px;
-  
-    @include tablet {
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 25px;
-      margin-bottom: 20px;
-    }
-  
-    @include desktop {
-      grid-template-columns: repeat(5, 1fr);
-      column-gap: 25px;
-      margin-bottom: 32px;
-    }
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  row-gap: 40px;
+  grid-template-rows: fit-content(1%);
+  margin-bottom: 8px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    margin-bottom: 20px;
   }
-  
-  .book-card__link {
-    display: inline-block;
+
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 25px;
+    margin-bottom: 32px;
   }
-  
-  .book-card__image {
-    width: 335px;
-  
-    @include tablet {
-      height: 316px;
-    }
-  
-    @include desktop {
-      height: 256px;
-    }
+}
+
+.book-card__link {
+  display: inline-block;
+}
+
+.book-card__image {
+  width: 335px;
+
+  @include tablet {
+    height: 316px;
   }
-  
-  .book-card__wrapper {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    outline: 1px solid $category-title-color;
+
+  @include desktop {
+    height: 256px;
   }
-  
-  .book-card__overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-  
-    color: $header-color-dark;
-    background: $action-color;
-    border-radius: 0px 0px 8px 8px;
-  
-    transform: translateY(100%);
-    @include transition(transform);
-  }
-  
-  .book-card__link:hover .book-card__overlay,
-  .book-card__link:focus .book-card__overlay {
-    transform: translateY(0);
-  }
-  
-  .book-card__quick-view-text {
-    @include fonts(14px, 18px, 500, -0.04em, uppercase, $header-color-dark);
-  }
-  
-  .book-card__wrap {
-    padding-top: 14px;
-  }
-  
-  .book-card__name {
-    @include fonts(
-      16px,
-      18px,
-      700,
-      -0.04em,
-      uppercase,
-      var(--primary-text-color)
-    );
-    margin-bottom: 4px;
-  }
-  
-  .book-card__author {
-    @include fonts(12px, 14px, 400, -0.04em, false, $category-title-color);
-    font-style: italic;
-  }
+}
+
+.book-card__wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  outline: 1px solid $category-title-color;
+}
+
+.book-card__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  color: $header-color-dark;
+  background: $action-color;
+  border-radius: 0px 0px 8px 8px;
+
+  transform: translateY(100%);
+  @include transition(transform);
+}
+
+.book-card__link:hover .book-card__overlay,
+.book-card__link:focus .book-card__overlay {
+  transform: translateY(0);
+}
+
+.book-card__quick-view-text {
+  @include fonts(14px, 18px, 500, -0.04em, uppercase, $header-color-dark);
+}
+
+.book-card__wrap {
+  padding-top: 14px;
+}
+
+.book-card__name {
+  @include fonts(
+    16px,
+    18px,
+    700,
+    -0.04em,
+    uppercase,
+    var(--primary-text-color)
+  );
+  margin-bottom: 4px;
+}
+
+.book-card__author {
+  @include fonts(12px, 14px, 400, -0.04em, false, $category-title-color);
+  font-style: italic;
+}

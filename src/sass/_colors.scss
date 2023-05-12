@@ -1,8 +1,4 @@
 :root {
-  // Text colors
-  --primary-white: #ffffff;
-  --primary-text-color: #111111;
-  --secondary-black: #202024;
   --category-and-autor-color: #b4afaf;
 
   // Accents and buttons colors
@@ -12,13 +8,30 @@
   // backdrop-color
   --backdrop-color: rgba(17, 17, 17, 0.4);
 
-  //LightTheme colors
-  --light-body-background: #f6f6f6;
+  //Body
+  --body-bg-color: #f6f6f6;
 
-  // DarkTheme colors
-  --dark-body-background: #202024;
+  // --light-body-background: #f6f6f6;
+
+  // // DarkTheme colors
+  // --dark-body-background: #202024;
 
   // Animations
   --transition-time: 250ms;
   --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --header-bg-color: #ffffff;
+  --primary-text-color: #111111;
+  --body-bg-color: #f6f6f6;
+  --categories: #4f2ee8;
+  --categories-links-active-color: #4f2ee8;
+  --categories-links-color: rgba(17, 17, 17, 0.6);
+  --categories-scroll-bar: #e0e0e0;
+  --pop-up-bg-color: #ffffff;
+  --scrollbar-bg-color: #e0e0e0;
+  --scrollbar-hower-bg-color: #d2d2d2;
+  --autorization-modal-border-color: #111111;
+  --autorization-form-btn-text-color: #f3f3f3;
+  --autorization-links-color: rgba(17, 17, 17, 0.5);
+  --shopping-list-text-color: rgba(0, 0, 0, 0.6);
 }
