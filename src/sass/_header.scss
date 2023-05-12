@@ -85,6 +85,7 @@ ul {
   right: 16.67%;
   top: 8.33%;
   bottom: 8.33%;
+  fill: var(--primary-text-color);
 }
 
 // .mobile-menu-open {
@@ -93,11 +94,6 @@ ul {
 //   height: 28px;
 //   fill: #111111;
 // }
-
-.mobile-menu-open:hover,
-.mobile-menu-open:focus {
-  color: #4f2ee8;
-}
 
 @media screen and (min-width: 375px) {
   .container-header {
@@ -164,10 +160,15 @@ ul {
   border: 0;
   padding: 0;
   background-color: transparent;
-  color: black;
-  fill: #111111;
+  color: var(--light-body-background);
+  fill: var(--primary-text-color);
   stroke: currentColor;
   cursor: pointer;
+}
+
+.mobile-menu-open:hover,
+.mobile-menu-open:focus {
+  color: #4f2ee8;
 }
 
 .mobile-menu__button {
