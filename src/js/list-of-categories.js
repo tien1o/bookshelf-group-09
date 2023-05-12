@@ -39,7 +39,7 @@ function onCategoryClick(evt) {
 
   let mainTitle = document.createElement('h1');
   const categoryBooksList = document.createElement('ul');
-  mainTitle.classList.add('bookcase__title', 'bookcase-text');
+  mainTitle.classList.add('bookcase__title', 'bookshelf-title' );
   mainTitle.innerHTML = normalizeMainTitle(categoryName);
   categoryBooksList.classList.add('bookshelf__content', 'book-card__list');
 
@@ -77,7 +77,7 @@ height = '${book_image_height}'
 </div>
 </a>
 <div class='book-card__wrap'>
-<h3 class='book-card__name'>${title ? title : 'Unknown title'}</h3>
+<h3 class='book__card__name'>${title ? title : 'Unknown title'}</h3>
 <p class='book-card__author'>${author ? author : 'Unknown author'}</p>
 </div>
 </li>`;
