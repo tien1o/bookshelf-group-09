@@ -8,28 +8,27 @@ import {
 } from 'firebase/auth';
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 import Notiflix from 'notiflix';
-
+// .is-hidden
 const auth = getAuth(app);
 
 const db = getDatabase(app);
-
+const navHeder = document.querySelector('.style-nav');
+navHeder.classList.add('is-hidden');
 
 const singBtnUp = document.querySelector('#sign-up');
 const singBtnIn = document.querySelector('#sign-in');
 const logOutBtn = document.querySelector('.js-log-out-btn');
 const backdrop = document.querySelector('.authorization__bacdrop');
-const userBarBtnText = document.querySelector('.user-bar-btn__text')
-const userBar = document.querySelector('.js-user-bar')
+const userBarBtnText = document.querySelector('.user-bar-btn__text');
+const userBar = document.querySelector('.js-user-bar');
 const openModalBtn = document.querySelector('[data-modal-open]');
 const signUpHeaderBtn = document.querySelector('.sign-up-btn');
 
-
-singBtnUp.addEventListener('submit', registrUser )
-singBtnIn.addEventListener('submit', handelSignInUserAccount)
+singBtnUp.addEventListener('submit', registrUser);
+singBtnIn.addEventListener('submit', handelSignInUserAccount);
 logOutBtn.addEventListener('click', handelLogOutUserAccount);
 
-
- const testBtn = document.querySelector('.test')
+const testBtn = document.querySelector('.test');
 
 function registrUser(evt) {
   evt.preventDefault();
@@ -49,62 +48,54 @@ function registrUser(evt) {
       evt.target.reset();
     }, 3000);
   }
-
- }
- // реєструємо нового користвуча
-      function createUser(auth, userEmail, userPassword, userName) {
-
+}
+// реєструємо нового користвуча
+function createUser(auth, userEmail, userPassword, userName) {
   createUserWithEmailAndPassword(auth, userEmail, userPassword)
-  .then(creat => {
-    let userId = creat.user.uid;
-    //зберігаємо його облікові дані у сховище Database
-    writeUserData(userId, userName, userEmail);
-    Notiflix.Notify.success(
-      `Hello, ${userName}, your registration was successful`
-    );
-    backdrop.style.display = 'none';
-    backdrop.classList.add('is-hidden');
-    signUpHeaderBtn.classList.add('visually-hidden')
-
-  }).catch(error => {
-    if (error.code === 'auth/email-already-in-use') {
-      Notiflix.Notify.failure(
-        'A user with this email address is already registered'
+    .then(creat => {
+      let userId = creat.user.uid;
+      //зберігаємо його облікові дані у сховище Database
+      writeUserData(userId, userName, userEmail);
+      Notiflix.Notify.success(
+        `Hello, ${userName}, your registration was successful`
       );
-    }
-  });
- }
-
-
-    function handelSignInUserAccount(evt) {
-      evt.preventDefault();
-      const {
-        elements: { email, password },
-      } = evt.currentTarget;
-    
-      let userEmail = email.value;
-      let userPassword = password.value;
-
-      if (signInUserAccount(auth, userEmail, userPassword)) {
-        setTimeout(() => {
-          evt.target.reset();
-        }, 3000);
+      backdrop.style.display = 'none';
+      backdrop.classList.add('is-hidden');
+      signUpHeaderBtn.classList.add('visually-hidden');
+      navHeder.classList.remove('is-hidden');
+    })
+    .catch(error => {
+      if (error.code === 'auth/email-already-in-use') {
+        Notiflix.Notify.failure(
+          'A user with this email address is already registered'
+        );
       }
-      
-    }
+    });
+}
+
+function handelSignInUserAccount(evt) {
+  evt.preventDefault();
+  const {
+    elements: { email, password },
+  } = evt.currentTarget;
+
+  let userEmail = email.value;
+  let userPassword = password.value;
+
+  if (signInUserAccount(auth, userEmail, userPassword)) {
+    setTimeout(() => {
+      evt.target.reset();
+    }, 3000);
+  }
+}
 
 //створюємо функцію для можливості увійти у свій акаунт зареєстрованому користувачу
 function signInUserAccount(auth, userEmail, userPassword) {
   signInWithEmailAndPassword(auth, userEmail, userPassword)
-  
     .then(() => {
       backdrop.style.display = 'none';
       backdrop.classList.add('is-hidden');
-      signUpHeaderBtn.classList.add('visually-hidden')
-
-
-      
-
+      signUpHeaderBtn.classList.add('visually-hidden');
     })
     .catch(error => {
       if (error.code === 'auth/wrong-password') {
@@ -118,7 +109,7 @@ function signInUserAccount(auth, userEmail, userPassword) {
       // console.log(errorMessage);
     });
 }
-console.log(auth)
+console.log(auth);
 
 //записуємо у сховище Database облікові дані користувача
 const writeUserData = (userId, userName, userEmail) => {
@@ -129,16 +120,14 @@ const writeUserData = (userId, userName, userEmail) => {
     // console.log(error.code);
     // console.log(error.message);
   });
-  
 };
 
- function validatePassword(password) {
+function validatePassword(password) {
   if (password.length < 6) {
     Notiflix.Notify.failure('Password should be at least 6 characters');
     return;
   }
 }
-
 
 //перевіряємо, чи єактивний User на сторінці
 function checkUserAuth() {
@@ -149,35 +138,30 @@ function checkUserAuth() {
       onValue(userNameRef, name => {
         const currentUserName = name.exportVal();
         userBarBtnText.innerHTML = currentUserName.username;
-    
       });
       userBar.classList.remove('visually-hidden');
-      signUpHeaderBtn.classList.add('visually-hidden')
-  
+      signUpHeaderBtn.classList.add('visually-hidden');
+      navHeder.classList.remove('is-hidden');
       localStorage.setItem('user', 'true');
     }
   });
 }
 checkUserAuth();
 
-
 // виход користувача зі сторінки
 function handelLogOutUserAccount() {
   signOut(auth)
     .then(() => {
-     
-      userBar.classList.add('visually-hidden')
+      userBar.classList.add('visually-hidden');
       signUpHeaderBtn.classList.remove('visually-hidden');
       backdrop.style.display = 'block';
       userBarBtnText.innerHTML = '';
 
-      
+      navHeder.classList.add('is-hidden');
       localStorage.removeItem('user');
-      
     })
     .catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
 }
-

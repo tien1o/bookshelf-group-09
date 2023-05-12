@@ -24,3 +24,5 @@ import Loader from './js/loader';
 import Registration from './js/modal-regietr';
 import './js/firebase-config';
 import './js/firebase-user';
+// mobile burger
+import Burger from './js/mobile-burger';
