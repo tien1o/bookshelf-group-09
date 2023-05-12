@@ -1,20 +1,20 @@
-import imageOne from '../images/support-ukraine/image-1.png';
+import imageOne from '../images/support-ukraine/image-1@1x.png';
 import imageOne1 from '../images/support-ukraine/image-1@2x.png';
-import imageTwo from '../images/support-ukraine/image-2.png';
+import imageTwo from '../images/support-ukraine/image-2@1x.png';
 import imageTwo2 from '../images/support-ukraine/image-2@2x.png';
-import imageThree from '../images/support-ukraine/image-3.png';
+import imageThree from '../images/support-ukraine/image-3@1x.png';
 import imageThree3 from '../images/support-ukraine/image-3@2x.png';
-import imageFour from '../images/support-ukraine/image-4.png';
+import imageFour from '../images/support-ukraine/image-4@1x.png';
 import imageFour4 from '../images/support-ukraine/image-4@2x.png';
-import imageFive from '../images/support-ukraine/image-5.png';
+import imageFive from '../images/support-ukraine/image-5@1x.png';
 import imageFive5 from '../images/support-ukraine/image-5@2x.png';
-import imageSix from '../images/support-ukraine/image-6.png';
+import imageSix from '../images/support-ukraine/image-6@1x.png';
 import imageSix6 from '../images/support-ukraine/image-6@2x.png';
-import imageSeven from '../images/support-ukraine/image-7.png';
+import imageSeven from '../images/support-ukraine/image-7@1x.png';
 import imageSeven7 from '../images/support-ukraine/image-7@2x.png';
-import imageEight from '../images/support-ukraine/image-8.png';
+import imageEight from '../images/support-ukraine/image-8@1x.png';
 import imageEight8 from '../images/support-ukraine/image-8@2x.png';
-import imageNine from '../images/support-ukraine/image-9.png';
+import imageNine from '../images/support-ukraine/image-9@1x.png';
 import imageNine9 from '../images/support-ukraine/image-9@2x.png';
 
 export const iconRender = [
@@ -66,7 +66,7 @@ export const iconRender = [
     img: imageEight,
     img2: imageEight8,
   },
-  
+
   {
     title: '09',
     url: 'https://u24.gov.ua/uk',
