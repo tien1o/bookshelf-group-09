@@ -8,10 +8,13 @@ import {
 } from 'firebase/auth';
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 import Notiflix from 'notiflix';
-
+// .is-hidden
 const auth = getAuth(app);
 
 const db = getDatabase(app);
+const navHeder = document.querySelector('.style-nav')
+navHeder.classList.add('is-hidden');
+
 
 
 const singBtnUp = document.querySelector('#sign-up');
@@ -64,7 +67,8 @@ function registrUser(evt) {
     );
     backdrop.style.display = 'none';
     backdrop.classList.add('is-hidden');
-    signUpHeaderBtn.classList.add('visually-hidden')
+    signUpHeaderBtn.classList.add('visually-hidden');
+    navHeder.classList.remove('is-hidden');
 
   }).catch(error => {
     if (error.code === 'auth/email-already-in-use') {
@@ -153,7 +157,7 @@ function checkUserAuth() {
       });
       userBar.classList.remove('visually-hidden');
       signUpHeaderBtn.classList.add('visually-hidden')
-  
+      navHeder.classList.remove('is-hidden')
       localStorage.setItem('user', 'true');
     }
   });
@@ -171,7 +175,7 @@ function handelLogOutUserAccount() {
       backdrop.style.display = 'block';
       userBarBtnText.innerHTML = '';
 
-      
+      navHeder.classList.add('is-hidden');
       localStorage.removeItem('user');
       
     })
