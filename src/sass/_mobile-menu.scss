@@ -10,8 +10,8 @@
 .container-mb-menu {
   position: absolute;
   z-index: 10;
-  // top: 0px;
-  // left: 0;
+  top: 0px;
+  left: 0;
   width: 100%;
   height: 100%;
 
@@ -113,9 +113,9 @@
   align-items: center;
 }
 
-//   .display-none {
-//     display: none;
-//   }
+.display-none {
+  display: none;
+}
 
 .mobile-home,
 .mobile-shoplist {
@@ -198,9 +198,9 @@
   }
 }
 
-// .mobile__logout.display-none {
-//   display: none;
-// }
+.mobile__logout.display-none {
+  display: none;
+}
 
 .is-burger-hidden {
   opacity: 0;

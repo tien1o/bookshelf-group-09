@@ -1,7 +1,9 @@
+import bodyScrollLock from 'body-scroll-lock';
+
 (() => {
-  const mobileBurgerMenu = document.querySelector('data-burger-menu');
-  const openBurgerBtn = document.querySelector('data-menu-burger-open');
-  const closeBurgerMenuBtn = document.querySelector('data-menu-burger-close');
+  const mobileBurgerMenu = document.querySelector('.data-burger-menu');
+  const openBurgerBtn = document.querySelector('[data-menu-burger-open]');
+  const closeBurgerMenuBtn = document.querySelector('[data-menu-burger-close]');
 
   const toggleMenu = () => {
     const isMenuOpen =
@@ -9,10 +11,10 @@
     openBurgerBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileBurgerMenu.classList.toggle('is-burger-open');
 
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+    // const scrollLockMethod = !isMenuOpen
+    //   ? 'disableBodyScroll'
+    //   : 'enableBodyScroll';
+    // bodyScrollLock[scrollLockMethod](document.body);
   };
 
   openBurgerBtn.addEventListener('click', toggleMenu);
