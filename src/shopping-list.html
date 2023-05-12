@@ -7,6 +7,7 @@
     <title>Bookshelf</title>
     <!-- Styles -->
     <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="./sass/_shopping-list.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,11 +23,15 @@
 
         <!-- Main -->
         <include src="./partials/shopping-list-main.html"></include>
-        
+        <include src="./partials/scrollup.html"></include>
+        <include src="./partials/knopka.html"></include>
+        <include src="./partials/modalForm.html"></include>
        
       </div>
     </main>
     
     <script type="module" src="./shopping-list.js"></script>
+    <script type="module" src="./js/firebase-user.js"></script>
+    <script type="module" src="./js/modal-regietr.js"></script>
   </body>
 </html>

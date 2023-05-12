@@ -1,6 +1,7 @@
 import { getCategories } from '../js/getcategories';
 import { booksCategory } from './apiBooks';
 import { renderAllCategories } from './section-main-books';
+import { openModal } from './modal';
 
 const listOfCategories = document.querySelector('.categories__list');
 
@@ -16,7 +17,7 @@ getCategories().then(response => {
        <li class='categories__item active__category' data-category-name='All categories'>All categories</li>`;
   listOfCategories.insertAdjacentHTML('beforeend', sortedCategories);
   const allItems = document.querySelectorAll('.categories__item');
-  allItems.forEach(() => addEventListener('click', onCategoryClick));
+  allItems.forEach((item) => item.addEventListener('click', onCategoryClick));
 });
 
 function onCategoryClick(evt) {
@@ -60,7 +61,7 @@ function onCategoryClick(evt) {
           buy_links,
           _id,
         }) => {
-          return `<li class='book-card__item'>
+          return `<li class='book-card__item' data-id=${_id}>
 <a class='book-card__link' href='#' data-id='${_id}'>
 <div class='book-card__wrapper'>
 <img
@@ -87,6 +88,16 @@ height = '${book_image_height}'
     mainSectionsBooks.innerHTML = '';
     mainSectionsBooks.appendChild(mainTitle);
     mainSectionsBooks.appendChild(categoryBooksList);
+
+        
+ const bookElements = document.querySelectorAll('.book-card__item');
+ bookElements.forEach(el =>
+   el.addEventListener('click', event => {
+     event.preventDefault();
+     openModal(el);
+   })
+ );
+
   });
 }
 

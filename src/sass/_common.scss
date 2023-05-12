@@ -37,6 +37,14 @@ ol {
   padding-left: 0;
 }
 
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  outline: none;
+  white-space: nowrap;
+}
+
 .list {
   margin: 0;
   padding: 0;
