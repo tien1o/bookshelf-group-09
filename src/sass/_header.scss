@@ -5,6 +5,15 @@ ul {
   text-decoration: none;
 }
 
+.logo-home-page {
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.js-logo-svg {
+  margin-right: 8px;
+}
 .container-header {
   // position: fixed;
   display: flex;
@@ -29,7 +38,8 @@ ul {
 .logo-img {
   /* justify-content: space-between; */
   margin-right: 125px;
-  width: 109px;
+
+  // width: 109px;
 }
 
 .nav-home {
